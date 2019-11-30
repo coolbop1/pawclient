@@ -45,7 +45,7 @@ function setOutcome(result) {
     const user_data = sessionStorage.getItem("user");
     const { email } = user_data;
     const amount = sessionStorage.getItem("amount");
-    fetch("http://517a7569.ngrok.io/charge", {
+    fetch("https://517a7569.ngrok.io/charge", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json"
