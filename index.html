@@ -557,6 +557,7 @@ Your donation will go into the purchase of a truck to support this cause. </p>
     }
 
     function gotoDetailsForm() {
+      sessionStorage.removeItem('checkoutid');
       sessionStorage.setItem('amount', selected_amount);
       sessionStorage.setItem('description', description);
       window.location.href = 'donation-2.html'

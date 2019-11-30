@@ -352,6 +352,7 @@
 
   <script type='text/javascript'>
     function gotoDetailsForm() {
+      sessionStorage.removeItem('checkoutid');
       sessionStorage.setItem('amount', selected_amount);
       sessionStorage.setItem('description', description);
       window.location.href = 'donation-2.html'

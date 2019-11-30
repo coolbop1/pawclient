@@ -1,70 +1,104 @@
-// Create a Stripe client.
-var stripe = Stripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
-
-// Create an instance of Elements.
+var stripe = Stripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
 var elements = stripe.elements();
 
-// Custom styling can be passed to options when creating an Element.
-// (Note that this demo uses a wider set of styles than the guide below.)
 var style = {
   base: {
-    color: "#32325d",
-    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-    fontSmoothing: "antialiased",
-    fontSize: "16px",
+    iconColor: "#666EE8",
+    color: "#31325F",
+    lineHeight: "40px",
+    fontWeight: 300,
+    fontFamily: "Helvetica Neue",
+    fontSize: "15px",
+
     "::placeholder": {
-      color: "#aab7c4"
+      color: "#CFD7E0"
     }
-  },
-  invalid: {
-    color: "#fa755a",
-    iconColor: "#fa755a"
   }
 };
 
-// Create an instance of the card Element.
-var card = elements.create("card", { style: style });
+var cardNumberElement = elements.create("cardNumber", {
+  style: style,
+  placeholder: "Custom card number placeholder"
+});
+cardNumberElement.mount("#card-number-element");
 
-// Add an instance of the card Element into the `card-element` <div>.
-card.mount("#card-element");
+var cardExpiryElement = elements.create("cardExpiry", {
+  style: style,
+  placeholder: "Custom expiry date placeholder"
+});
+cardExpiryElement.mount("#card-expiry-element");
 
-// Handle real-time validation errors from the card Element.
-card.addEventListener("change", function(event) {
-  var displayError = document.getElementById("card-errors");
-  if (event.error) {
-    displayError.textContent = event.error.message;
-  } else {
-    displayError.textContent = "";
+var cardCvcElement = elements.create("cardCvc", {
+  style: style,
+  placeholder: "Custom CVC placeholder"
+});
+cardCvcElement.mount("#card-cvc-element");
+
+function setOutcome(result) {
+  var successElement = document.querySelector(".success");
+  var errorElement = document.querySelector(".error");
+  successElement.classList.remove("visible");
+  errorElement.classList.remove("visible");
+  console.log(result);
+  if (result.token) {
+    // In this example, we're simply displaying the token
+    const user_data = sessionStorage.getItem("user");
+    const { email } = user_data;
+    const amount = sessionStorage.getItem("amount");
+    fetch("http://517a7569.ngrok.io/charge", {
+      method: "POST",
+      headers: new Headers({
+        "Content-Type": "application/json"
+      }),
+      body: JSON.stringify({
+        token: result.token.id,
+        amount: amount,
+        description: "donation",
+        email
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        const { status } = data;
+        status === "error"
+          ? this.setState({
+              isProcessing: false,
+              paymentStatus: "Your payment failed. Please try again"
+            })
+          : this.setState({
+              isProcessing: false,
+              paymentStatus: "Your payment has been completed successfully",
+              done: true
+            });
+      })
+      .catch(err => console.log(err));
+    //successElement.querySelector(".token").textContent = result.token.id;
+    //successElement.classList.add("visible");
+
+    // In a real integration, you'd submit the form with the token to your backend server
+    //var form = document.querySelector('form');
+    //form.querySelector('input[name="token"]').setAttribute('value', result.token.id);
+    //form.submit();
+  } else if (result.error) {
+    errorElement.textContent = result.error.message;
+    errorElement.classList.add("visible");
   }
-});
-
-// Handle form submission.
-var form = document.getElementById("payment-form");
-form.addEventListener("submit", function(event) {
-  event.preventDefault();
-
-  stripe.createToken(card).then(function(result) {
-    if (result.error) {
-      // Inform the user if there was an error.
-      var errorElement = document.getElementById("card-errors");
-      errorElement.textContent = result.error.message;
-    } else {
-      // Send the token to your server.
-      stripeTokenHandler(result.token);
-    }
-  });
-});
-
-// Submit the form with the token ID.
-function stripeTokenHandler(token) {
-  // Insert the token ID into the form so it gets submitted to the server
-  var form = document.getElementById("payment-form");
-  var hiddenInput = document.createElement("input");
-  hiddenInput.setAttribute("type", "hidden");
-  hiddenInput.setAttribute("name", "stripeToken");
-  hiddenInput.setAttribute("value", token.id);
-  form.appendChild(hiddenInput);
-
-  // Submit the form
-  form.submit();
 }
+
+cardNumberElement.on("change", function(event) {
+  setOutcome(event);
+});
+
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  /*let options = {
+    email,
+    firstname,
+    lastname,
+    address,
+    phone
+  };
+  //stripe.createToken(cardNumberElement, options).then(setOutcome);*/
+  stripe.createToken(cardNumberElement).then(setOutcome);
+});

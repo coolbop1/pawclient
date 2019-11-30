@@ -145,6 +145,8 @@
                 </label>
                 <input id="phone" type="tel" required autocomplete="off" name="someid" onkeypress="return isNumberKey(event)" />
               </div>
+              <div id="amount_space"></div>
+             
 
               <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step</button>
 
@@ -301,6 +303,17 @@
   <!-- Active js -->
   <script src="js/active.js"></script>
   <script>
+      if (sessionStorage.getItem('checkoutid') === null){
+      document.getElementById("amount_space").innerHTML = 
+      ` <div class="field-wrap">
+          <label>
+            Amount $<span class="req">*</span>
+          </label>
+          <input type="number" required autocomplete="off" id="amount" />
+        </div>`;
+      }
+      </script>
+  <script>
     $('.form').find('input,option, textarea').on('keyup blur focus', function (e) {
 
       var $this = $(this),
@@ -398,6 +411,8 @@
   </script>
   <script type='text/javascript'>
     function gotoPayment() {
+      let checkout_id = sessionStorage.getItem('checkoutid');
+      
      
       let email = document.getElementById('email').value;
       let firstname = document.getElementById('firstname').value;
@@ -410,11 +425,14 @@
         email, firstname, lastname, address, phone
       };
       sessionStorage.setItem('user', JSON.stringify(user));
-      let checkout_id = sessionStorage.getItem('checkoutid');
-      console.log(checkout_id);
-      let stripe = Stripe('pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W');
-    
       
+      console.log(checkout_id);
+      if(checkout_id === null ){
+        let amount = document.getElementById('amount').value;
+        sessionStorage.setItem('amount',amount);
+        window.location.href = 'payment.html'; 
+      }else{
+      let stripe = Stripe('pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W');
         // When the customer clicks on the button, redirect
         // them to Checkout.
         stripe.redirectToCheckout({
@@ -425,8 +443,8 @@
           // a successful payment.
           // Instead use one of the strategies described in
           // https://stripe.com/docs/payments/checkout/fulfillment
-          successUrl: 'https://your-website.com/success',
-          cancelUrl: 'https://your-website.com/canceled',
+          successUrl: 'https://www.pawsalvation.com/success',
+          cancelUrl: 'https://www.pawsalvation.com/canceled',
         })
         .then(function (result) {
           if (result.error) {
@@ -436,8 +454,8 @@
             displayError.textContent = result.error.message;
           }
         });
-      //redirectToCheckout();
-      //window.location.href = 'payment.html';      
+      }
+           
     }
 
   </script>
