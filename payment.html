@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Title -->
+    <title>Paw Salvation</title>
+    <link href="new/css/main.css" rel="stylesheet" />
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico" />
+    <script src="https://js.stripe.com/v3/"></script>
+    <script src="payment.js"></script>
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .StripeElement {
+        box-sizing: border-box;
+
+        height: 40px;
+
+        padding: 10px 12px;
+
+        border: 1px solid transparent;
+        border-radius: 4px;
+        background-color: white;
+
+        box-shadow: 0 1px 3px 0 #e6ebf1;
+        -webkit-transition: box-shadow 150ms ease;
+        transition: box-shadow 150ms ease;
+      }
+
+      .StripeElement--focus {
+        box-shadow: 0 1px 3px 0 #cfd7df;
+      }
+
+      .StripeElement--invalid {
+        border-color: #fa755a;
+      }
+
+      .StripeElement--webkit-autofill {
+        background-color: #fefde5 !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+      <!-- Navbar Area -->
+      <div class="cryptos-main-menu">
+        <div class="classy-nav-container breakpoint-off">
+          <div class="container">
+            <!-- Menu -->
+            <nav class="classy-navbar justify-content-between" id="cryptosNav">
+              <!-- Logo -->
+              <a class="nav-brand" href="index.html"
+                ><a class="nav-brand" href="index.html"
+                  ><img
+                    src="img/crop-logo.png"
+                    class="top-logo"
+                    width="100"
+                    height="100"
+                    alt="logo"/></a
+              ></a>
+
+              <!-- Navbar Toggler -->
+              <div class="classy-navbar-toggler">
+                <span class="navbarToggler"
+                  ><span></span><span></span><span></span
+                ></span>
+              </div>
+
+              <!-- Menu -->
+              <div class="classy-menu">
+                <!-- close btn -->
+                <div class="classycloseIcon">
+                  <div class="cross-wrap">
+                    <span class="top"></span><span class="bottom"></span>
+                  </div>
+                </div>
+
+                <!-- Nav Start -->
+                <div class="classynav">
+                  <ul>
+                    <img
+                      src="img/security.png"
+                      class="top-logo"
+                      width="100"
+                      height="100"
+                      alt="logo"
+                    />
+                  </ul>
+
+                  <!-- Newsletter Form -->
+                </div>
+
+                <!-- Nav End -->
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <br /><br />
+    <!-- ##### Hero Area End ##### -->
+
+    <section style="padding: 200px">
+      <form action="/charge" method="post" id="payment-form">
+        <div class="form-row">
+          <label for="card-element">
+            Credit or debit card
+          </label>
+          <div id="card-element">
+            <!-- A Stripe Element will be inserted here. -->
+          </div>
+
+          <!-- Used to display form errors. -->
+          <div id="card-errors" role="alert"></div>
+        </div>
+
+        <button>Submit Payment</button>
+      </form>
+    </section>
+
+    <footer id="footer" class="footer-donate">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-4 edoja-color">
+            <p class="h3 respect font-weight-bold d-inline">PAW SALVATION</p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="about.html">About Paw Salvation</a>
+            </p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="">Policy</a>
+            </p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="">pet care topics</a>
+            </p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="">sitemap</a>
+            </p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="">privacy policy</a>
+            </p>
+            <p class="h5 d-inline up-case" style="margin-top: 2rem;">
+              <a href="">about our ads</a>
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+
+          <div class="col-sm-5 edoja-color">
+            <br />
+            <p class="h5 line respect d-inline">
+              Get the latest on our progress, sign up for the PawSalvation
+              newsletter.
+            </p>
+            <br />
+            <p class="h5 line respect d-inline">PO BOX 489 POSEN, IL 60469</p>
+
+            <p class="h5 d-inline">
+              <a href="tel:+217518642">Phone number: +1 (217) 518 6428</a>
+            </p>
+
+            <p class="h5 d-inline">
+              <a href="mailto:info@pawsalvation.com">
+                Email: info@pawsalvation.com</a
+              >
+            </p>
+          </div>
+          <div class="col-sm-1"></div>
+        </div>
+      </div>
+    </footer>
+    <footer id="footer" class="footer-down">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col-sm-7 edoja-color">
+            <p class="h6 d-inline line">
+              ©2019 pawsalvation.com. All trademarks are owned by Paw Salvation
+              Charity Organization.
+            </p>
+          </div>
+          <div class="col-sm-4 edoja-color">
+            <div class="">
+              <ul class="social-icons">
+                <li>
+                  <a href="https://www.facebook.com/pawsalvatn" target="_blank"
+                    ><img
+                      src="https://cdn2.iconfinder.com/data/icons/social-flat/512/facebook-128.png"
+                      width="32px;"
+                      height="32px;"
+                  /></a>
+                </li>
+                <li>
+                  <a href="https://twitter.com/PawSalvation" target="_blank"
+                    ><img
+                      src="https://cdn2.iconfinder.com/data/icons/social-flat/512/twitter-128.png"
+                      width="32px"
+                      height="32px;"
+                  /></a>
+                </li>
+                <li>
+                  <a href="" target="_blank"
+                    ><img
+                      src="https://cdn2.iconfinder.com/data/icons/social-flat/512/youtube-128.png"
+                      width="32px"
+                      height="32px;"
+                  /></a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/pawsalvation/"
+                    target="_blank"
+                    ><img
+                      src="https://cdn2.iconfinder.com/data/icons/social-flat/512/instagram-128.png"
+                      width="32px"
+                      height="32px;"
+                  /></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

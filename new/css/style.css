@@ -1,0 +1,417 @@
+@font-face {
+    font-family: 'starborn';
+    src: url('../vendor/fonts/Starborn.otf');
+    format('opentype');
+}
+* {
+    margin: 0;
+    padding 0;
+}
+html {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 15px;
+}
+.header {
+    position: relative;
+    padding-right: 15%;
+    padding-left: 15%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,170,0.45), rgba(0,0,170,0.45)),url(../images/slides/Paw-Salvation-slide-banner-1.jpg);
+}
+/* COMMON */
+.section {
+    height: 100%;
+}
+.bg {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.parallax {
+    background-attachment: fixed;
+}
+.container {
+    width: 1140px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+}
+.container p {
+    font-size: 110%;
+    line-height: 130%;
+    margin-bottom: 2.5rem;
+}
+.container h1 {
+    margin-bottom: 2.5rem;
+    font-weight: 500;
+},
+/* HEADER */
+.header img{
+    height: 100px;
+    width: auto;
+    z-index: 100;
+    position: absolute;
+}
+
+.navigation {
+    position: absolute;
+    top: 60;
+    right: 250;
+    z-index: 0;
+    list-style: none;
+    
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    margin-left: 5%;
+}
+.navigation-d {
+    position: absolute;
+    top: 60;
+    z-index: 0;
+    list-style: none;
+    background-color: #000091;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 10%;
+    padding-right: 15%;
+    margin-left: 5%;
+    
+}
+.navigation-d li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navigation-d li a {
+    text-decoration: none;
+    font-size: 75%;
+    color: #FFF;
+}
+.navigation li {
+    display: inline-block;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navigation li a {
+    text-decoration: none;
+    font-size: 95%;
+    color: #FFF;
+}
+.navigation li a:hover {
+    opacity: 0.7;
+}
+.slider {
+    padding-right: 1.5%;
+    padding-left: 1.8%;
+    padding-top: 1.5%;
+}
+.slider img{
+    max-width: 100%;
+    height: auto;
+    margin-top: 12%;
+}
+
+
+/* NEWS */
+.news {
+    background-color: #FFDD4D;
+}
+.news h1 {
+    padding-top: 5%;
+    margin-bottom: 5%;
+    font-weight: 500;
+    text-align: center;
+}
+.item {
+    background-color: #FFFFFF;
+    padding-top: 0;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+    padding-bottom: 1rem;
+    width: 20%;
+    display: block;
+	float:left;
+	margin: 1% 0 1% 3.6%;
+}
+.item:first-child { margin-left: 0; } /* all browsers except IE6 and lower */
+.item img {
+    width: 100%;
+    height: auto;
+}
+.item h3 {
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 5%;
+}
+.item p {
+    font-size: 70%;
+}
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%
+}
+
+/* DONATE */
+.donate {
+    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),url(../images/test.png);
+}
+.learn {
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(../images/test-1.png);
+}
+.adopt {
+    background-image: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.1)),url(../images/test-2.png);
+}
+/* FOOTER */
+.footer {
+    height: 45%;
+    background-color: #000091;
+    color: #FFFFFF;
+    padding-top: 2rem;
+    
+}
+.footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.left-column {
+    width: 55%;
+    float: left;
+}
+.email {
+    width: 100%;
+    font-size: 70%;
+    padding: 6% 10% 6% 10%;
+    margin: 7% 0;
+    border-radius: 5px;
+    border: 0; 
+}
+.input-container {
+    position: relative;
+}
+.input-icon {
+ font-size: 300%;
+ color: rgba(0, 0, 170, .7);
+ position: absolute;
+ right: 5px;
+ top: 22px;
+ z-index: 100;
+}
+.input-icon:hover {
+    cursor: pointer;
+    color: #000091;
+}
+.footer ul {
+    column-count: 1;
+    list-style: none;
+    list-style-position: inside;
+    padding-left: 0;
+    margin-top: 1.2rem;
+}
+.left-column li {
+    padding: .8rem 0;
+    text-transform: uppercase;
+    font-size: 70%;
+    color: #FFF;
+}
+.left-column h3 {
+    font-family: 'starborn';
+}
+.left-column li a {
+    color: #FFF;
+    text-decoration: none;
+}
+.left-column li:hover {
+    opacity: .5;
+}
+.right-column {
+    width: 30%;
+    padding-top: .9rem;
+}
+.right-column p {
+    font-size: 75%;
+    line-height: 210%;
+}
+.bottom {
+    background-color: #000;
+    height: 10%;
+    color: #FFF;
+    font-size: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+.copyright {
+    float: left;
+    margin-top: 20px;
+}
+.social-icons {
+    float: right;
+}
+.social-icons ul {
+    list-style: none;
+}
+.social-icons ul li {
+    display: inline-block;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.social-icons ul li:hover {
+    cursor: pointer;
+    opacity: .6;
+}
+
+
+/**UI INTERFACES */
+.btn-wrapper {
+    display: flex;
+    flex: .1;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 10%;
+    background-color: #000091;
+    border-radius: 200px;
+    padding: 10px 50px 10px 50px;
+}
+.btn-wrapper:hover {
+    background-color: #000070;
+    box-shadow: 2px 2px rgba(0,0,0, .2);
+    cursor: pointer;
+}
+.btn { 
+    margin: auto;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 70%;   
+}
+.icon {
+    height: 25px;
+    width: auto;
+    
+}
+
+
+/* ====================== */
+/* DONATE PAGE */
+/* ======================= */
+.donation-header {
+    position: relative;
+    padding-right: 15%;
+    padding-left: 15%;
+    height: 80%;
+}
+.message {
+    position: absolute;
+    bottom: 30%;
+    left: 25%;
+}
+.message h2 {
+    font-size: 290%;
+    font-weight: 700;
+    margin-bottom: 8%;
+}
+.message p {
+    line-height: 140%;
+}
+.payments {
+    width: 100%;
+    height: 50%;
+}
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 15%;
+    padding-right: 15%;
+    margin-top: 5%;
+}
+.payments h3 {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1.5%;
+    background-color: #000091;
+    color: #FFF;
+    padding-top: 1.1%;
+    padding-bottom: 1.1%;
+    padding-left: 1.8%
+}
+.instructions {
+    margin-left: 21%;
+    margin-bottom: 3%;
+    line-height: 150%;
+}
+.type {
+    display: block;
+    float: left;
+    width: 20%;
+    margin-right: 5%;
+    margin-left: 10%; 
+    text-align: center;
+}
+.type img {
+    width: 40%;
+    height: auto;
+    margin-bottom: 5%; 
+}
+
+.store {
+    margin-bottom: 10%;
+}
+
+.store-header {
+    font-family: 'starborn';
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 1.5%;
+    background-color: #000091;
+    color: #FFF;
+    padding-top: 1.1%;
+    padding-bottom: 1.1%;
+    padding-left: 2.2%;
+    font-size: 140%;
+    line-height: 125%;
+}
+.product {
+    width: 40%;
+    margin: 0 5%;
+}
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5%;
+}
+.product p {
+    margin-left: 23%;
+    margin-top: 2%;
+}
+.price {
+    margin-bottom: 6%;
+    font-weight: 600;
+}
+.shop-btn {
+    text-decoration: none;
+    background-color: #000091;
+    border-radius: 200px;
+    color: #FFF;
+    font-size: 70%;
+    padding: 2% 6%;
+    margin-left: 23%;  
+}
+.shop-btn:hover {
+    opacity: .7;
+}
+
+
+
