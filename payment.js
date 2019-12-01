@@ -49,10 +49,6 @@ function setOutcome(result) {
     console.log(firstname);
     fetch("https://77faff71.ngrok.io/api/charge", {
       method: "POST",
-      //mode: "no-cors",
-      headers: {
-        "Content-Type": "application/json"
-      },
       body: JSON.stringify({
         token: result.token.id,
         amount: amount,
