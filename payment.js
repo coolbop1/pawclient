@@ -50,7 +50,8 @@ function setOutcome(result) {
     fetch("https://pawsalvation.com/api/charge", {
       method: "POST",
       headers: new Headers({
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Origin": "*"
       }),
       body: JSON.stringify({
         token: result.token.id,
