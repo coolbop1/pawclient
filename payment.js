@@ -1,5 +1,5 @@
-var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
-//var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
+//var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
+var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
 var elements = stripe.elements();
 
 var style = {
@@ -49,6 +49,10 @@ function setOutcome(result) {
     console.log(firstname);
     fetch("https://77faff71.ngrok.io/api/charge", {
       method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
       body: JSON.stringify({
         token: result.token.id,
         amount: amount,
