@@ -40,6 +40,7 @@ function setOutcome(result) {
   successElement.classList.remove("visible");
   errorElement.classList.remove("visible");
   console.log(result);
+
   if (result.token) {
     // In this example, we're simply displaying the token
     const user_data = sessionStorage.getItem("user");
