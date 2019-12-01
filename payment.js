@@ -55,7 +55,7 @@ function setOutcome(result) {
       },
       body: JSON.stringify({
         token: result.token.id,
-        amount: amount,
+        amount: amount * 100,
         description: "donation",
         email,
         firstname,
