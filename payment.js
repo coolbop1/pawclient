@@ -42,7 +42,6 @@ function setOutcome(result) {
   console.log(result);
 
   if (result.token) {
-    // In this example, we're simply displaying the token
     const user_data = sessionStorage.getItem("user");
     const { email } = user_data;
     const amount = sessionStorage.getItem("amount");
