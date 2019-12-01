@@ -47,7 +47,7 @@ function setOutcome(result) {
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
     console.log(firstname);
-    fetch("http://127.0.0.1:3000/api/charge", {
+    fetch("https://77faff71.ngrok.io/api/charge", {
       method: "POST",
       //mode: "no-cors",
       headers: {
