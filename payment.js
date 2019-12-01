@@ -1,4 +1,4 @@
-var stripe = Stripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
+var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
 var elements = stripe.elements();
 
 var style = {
@@ -61,10 +61,8 @@ function setOutcome(result) {
       .then(data => {
         const { status } = data;
         if (status === "error") {
-          this.setState({
-            isProcessing: false,
-            paymentStatus: "Your payment failed. Please try again"
-          });
+          errorElement.textContent = data.message;
+          errorElement.classList.add("visible");
         } else {
           successElement.querySelector(".token").textContent = result.token.id;
           successElement.classList.add("visible");
@@ -91,13 +89,5 @@ cardNumberElement.on("change", function(event) {
 document.querySelector("form").addEventListener("submit", function(e) {
   e.preventDefault();
 
-  /*let options = {
-    email,
-    firstname,
-    lastname,
-    address,
-    phone
-  };
-  //stripe.createToken(cardNumberElement, options).then(setOutcome);*/
   stripe.createToken(cardNumberElement).then(setOutcome);
 });
