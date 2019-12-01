@@ -61,16 +61,15 @@ function setOutcome(result) {
       .then(res => res.json())
       .then(data => {
         const { status } = data;
-        status === "error"
-          ? this.setState({
-              isProcessing: false,
-              paymentStatus: "Your payment failed. Please try again"
-            })
-          : this.setState({
-              isProcessing: false,
-              paymentStatus: "Your payment has been completed successfully",
-              done: true
-            });
+        if (status === "error") {
+          this.setState({
+            isProcessing: false,
+            paymentStatus: "Your payment failed. Please try again"
+          });
+        } else {
+          successElement.querySelector(".token").textContent = result.token.id;
+          successElement.classList.add("visible");
+        }
       })
       .catch(err => console.log(err));
     //successElement.querySelector(".token").textContent = result.token.id;
