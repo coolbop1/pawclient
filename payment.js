@@ -70,7 +70,6 @@ function setOutcome(result) {
           errorElement.textContent = data.message;
           errorElement.classList.add("visible");
         } else {
-          //successElement.querySelector(".token").textContent = result.token.id;
           successElement.classList.add("visible");
         }
       })
