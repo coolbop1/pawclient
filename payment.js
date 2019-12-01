@@ -47,7 +47,7 @@ function setOutcome(result) {
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
     console.log(firstname);
-    fetch("https://pawsalvation.com/api/charge", {
+    fetch("http://127.0.0.1:3000/api/charge", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json",
