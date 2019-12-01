@@ -49,7 +49,7 @@ function setOutcome(result) {
     console.log(firstname);
     fetch("http://127.0.0.1:3000/api/charge", {
       method: "POST",
-      mode: "no-cors",
+      //mode: "no-cors",
       headers: {
         "Content-Type": "application/json"
       },
