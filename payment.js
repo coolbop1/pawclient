@@ -43,7 +43,7 @@ function setOutcome(result) {
 
   if (result.token) {
     const user_data = sessionStorage.getItem("user");
-    const { email } = user_data;
+    const { email, firstname, lastname, address } = user_data;
     const amount = sessionStorage.getItem("amount");
     fetch("https://517a7569.ngrok.io/charge", {
       method: "POST",
@@ -54,7 +54,10 @@ function setOutcome(result) {
         token: result.token.id,
         amount: amount,
         description: "donation",
-        email
+        email,
+        firstname,
+        lastname,
+        address
       })
     })
       .then(res => res.json())
