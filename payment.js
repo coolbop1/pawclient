@@ -47,7 +47,7 @@ function setOutcome(result) {
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
     console.log(firstname);
-    fetch("https://77faff71.ngrok.io/api/charge", {
+    fetch("https://pawsalvation.com/api/charge", {
       method: "POST",
       headers: {
         Accept: "application/json",
