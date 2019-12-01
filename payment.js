@@ -1,5 +1,5 @@
-//var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
-var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
+var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
+//var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
 var elements = stripe.elements();
 
 var style = {
@@ -50,8 +50,7 @@ function setOutcome(result) {
     fetch("http://127.0.0.1:3000/api/charge", {
       method: "POST",
       headers: new Headers({
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*"
+        "Content-Type": "application/json"
       }),
       body: JSON.stringify({
         token: result.token.id,
