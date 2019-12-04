@@ -49,10 +49,9 @@ function setOutcome(result) {
     console.log(firstname);
     fetch("https://test-paw.herokuapp.com/api/charge", {
       method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
+      headers: new Headers({
+        "Content-Type": "application/json; charset=UTF-8"
+      }),
       body: JSON.stringify({
         token: result.token.id,
         amount: amount * 100,
