@@ -172,7 +172,7 @@
     const user_data = sessionStorage.getItem("user");
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
-    fetch("https://pawsalvation.com/api/charge", {
+    fetch("https://test-paw.herokuapp.com/api/charge", {
       method: "POST",
       headers: {
         Accept: "application/json",
