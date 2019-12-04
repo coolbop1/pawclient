@@ -47,7 +47,7 @@ function setOutcome(result) {
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
     console.log(firstname);
-    fetch("https://test-paw.herokuapp.com/api/charge", {
+    fetch("https://pawsalvation.herokuapp.com/api/charge", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json; charset=UTF-8"
