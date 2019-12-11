@@ -93,6 +93,7 @@ function setOutcome(result) {
 }
 
 cardNumberElement.on("change", function (event) {
+  defaultlabel = paybutton.innerHTML;
   setOutcome(event);
 });
 
