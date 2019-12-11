@@ -1,203 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link rel="shortcut icon" href="images/logo-1.png" />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="144x144"
-      href="images/ico/apple-touch-icon-144-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="114x114"
-      href="images/ico/apple-touch-icon-114-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      sizes="72x72"
-      href="images/ico/apple-touch-icon-72-precomposed.png"
-    />
-    <link
-      rel="apple-touch-icon-precomposed"
-      href="images/ico/apple-touch-icon-57-precomposed.png"
-    />
-    <title>Donation</title>
-    <style>
-      * {
-        font-family: "Helvetica Neue", Helvetica;
-        font-size: 15px;
-        font-variant: normal;
-        padding: 0;
-        margin: 0;
-      }
 
-      html {
-        height: 100%;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="shortcut icon" href="images/logo-1.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png" />
+  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png" />
+  <title>Donation</title>
+  <style>
+    * {
+      font-family: "Helvetica Neue", Helvetica;
+      font-size: 15px;
+      font-variant: normal;
+      padding: 0;
+      margin: 0;
+    }
 
-      body {
-        background: #e6ebf1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100%;
-      }
+    html {
+      height: 100%;
+    }
 
-      form {
-        width: 480px;
-        margin: 20px 0;
-      }
+    body {
+      background: #e6ebf1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100%;
+    }
 
-      .group {
-        background: white;
-        box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1),
-          0 3px 6px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 4px;
-        margin-bottom: 20px;
-      }
+    form {
+      width: 480px;
+      margin: 20px 0;
+    }
 
-      label {
-        position: relative;
-        color: #8898aa;
-        font-weight: 300;
-        height: 40px;
-        line-height: 40px;
-        margin-left: 20px;
-        display: flex;
-        flex-direction: row;
-      }
+    .group {
+      background: white;
+      box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1),
+        0 3px 6px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
 
-      .group label:not(:last-child) {
-        border-bottom: 1px solid #f0f5fa;
-      }
+    label {
+      position: relative;
+      color: #8898aa;
+      font-weight: 300;
+      height: 40px;
+      line-height: 40px;
+      margin-left: 20px;
+      display: flex;
+      flex-direction: row;
+    }
 
-      label > span {
-        width: 120px;
-        text-align: right;
-        margin-right: 30px;
-      }
+    .group label:not(:last-child) {
+      border-bottom: 1px solid #f0f5fa;
+    }
 
-      .field {
-        background: transparent;
-        font-weight: 300;
-        border: 0;
-        color: #31325f;
-        outline: none;
-        flex: 1;
-        padding-right: 10px;
-        padding-left: 10px;
-        cursor: text;
-      }
+    label>span {
+      width: 120px;
+      text-align: right;
+      margin-right: 30px;
+    }
 
-      .field::-webkit-input-placeholder {
-        color: #cfd7e0;
-      }
+    .field {
+      background: transparent;
+      font-weight: 300;
+      border: 0;
+      color: #31325f;
+      outline: none;
+      flex: 1;
+      padding-right: 10px;
+      padding-left: 10px;
+      cursor: text;
+    }
 
-      .field::-moz-placeholder {
-        color: #cfd7e0;
-      }
+    .field::-webkit-input-placeholder {
+      color: #cfd7e0;
+    }
 
-      button {
-        float: left;
-        display: block;
-        background: #666ee8;
-        color: white;
-        box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1),
-          0 3px 6px 0 rgba(0, 0, 0, 0.08);
-        border-radius: 4px;
-        border: 0;
-        margin-top: 20px;
-        font-size: 15px;
-        font-weight: 400;
-        width: 100%;
-        height: 40px;
-        line-height: 38px;
-        outline: none;
-      }
+    .field::-moz-placeholder {
+      color: #cfd7e0;
+    }
 
-      button:focus {
-        background: #555abf;
-      }
+    button {
+      float: left;
+      display: block;
+      background: #666ee8;
+      color: white;
+      box-shadow: 0 7px 14px 0 rgba(49, 49, 93, 0.1),
+        0 3px 6px 0 rgba(0, 0, 0, 0.08);
+      border-radius: 4px;
+      border: 0;
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: 400;
+      width: 100%;
+      height: 40px;
+      line-height: 38px;
+      outline: none;
+    }
 
-      button:active {
-        background: #43458b;
-      }
+    button:focus {
+      background: #555abf;
+    }
 
-      .outcome {
-        float: left;
-        width: 100%;
-        padding-top: 8px;
-        min-height: 24px;
-        text-align: center;
-      }
+    button:active {
+      background: #43458b;
+    }
 
-      .success,
-      .error {
-        display: none;
-        font-size: 13px;
-      }
+    .outcome {
+      float: left;
+      width: 100%;
+      padding-top: 8px;
+      min-height: 24px;
+      text-align: center;
+    }
 
-      .success.visible,
-      .error.visible {
-        display: inline;
-      }
+    .success,
+    .error {
+      display: none;
+      font-size: 13px;
+    }
 
-      .error {
-        color: #e4584c;
-      }
+    .success.visible,
+    .error.visible {
+      display: inline;
+    }
 
-      .success {
-        color: #666ee8;
-      }
+    .error {
+      color: #e4584c;
+    }
 
-      .success .token {
-        font-weight: 500;
-        font-size: 13px;
-      }
-    </style>
-  </head>
-  <script src="https://js.stripe.com/v3/"></script>
+    .success {
+      color: #666ee8;
+    }
 
-  <body>
-    <form method="POST">
-      <input type="hidden" name="token" />
-      <div class="group">
-        <label>
-          <span>Card number</span>
-          <div id="card-number-element" class="field"></div>
-        </label>
-        <label>
-          <span>Expiry date</span>
-          <div id="card-expiry-element" class="field"></div>
-        </label>
-        <label>
-          <span>CVC</span>
-          <div id="card-cvc-element" class="field"></div>
-        </label>
+    .success .token {
+      font-weight: 500;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<script src="https://js.stripe.com/v3/"></script>
+
+<body>
+  <form method="POST">
+    <input type="hidden" name="token" />
+    <div class="group">
+      <label>
+        <span>Card number</span>
+        <div id="card-number-element" class="field"></div>
+      </label>
+      <label>
+        <span>Expiry date</span>
+        <div id="card-expiry-element" class="field"></div>
+      </label>
+      <label>
+        <span>CVC</span>
+        <div id="card-cvc-element" class="field"></div>
+      </label>
+    </div>
+    <button id="paybutton" type="submit">DONATE $<span id="amount"></span></button>
+    <div class="outcome">
+      <div class="error"></div>
+      <div class="success">
+        Donation Recieved! <br />
+        <a style="text-decoration:none" href="index.html">CONTINUE TO HOMEPAGE</a>
       </div>
-      <button type="submit">DONATE $<span id="amount"></span></button>
-      <div class="outcome">
-        <div class="error"></div>
-        <div class="success">
-          Donation Recieved! <br />
-          <a style="text-decoration:none" href="index.html"
-            >CONTINUE TO HOMEPAGE</a
-          >
-        </div>
-      </div>
-    </form>
-  </body>
-  <script src="payment.js"></script>
-  <script>
-    document.getElementById("amount").innerHTML = sessionStorage.getItem(
-      "amount"
-    );
-  </script>
+    </div>
+  </form>
+</body>
+<script src="payment.js"></script>
+<script>
+  document.getElementById("amount").innerHTML = sessionStorage.getItem(
+    "amount"
+  );
+</script>
+
 </html>
