@@ -309,7 +309,7 @@
           <label>
             Amount $<span class="req">*</span>
           </label>
-          <input type="number" required autocomplete="off" id="amount" />
+          <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)"/>
         </div>`;
       }
       </script>
