@@ -2510,3 +2510,18 @@ input::-webkit-inner-spin-button {
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
+
+.h4.new-product{
+  margin-top: -1rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
+  font-weight: bold;
+  font-size: 1.6rem;
+}
+
+.h5.new-product{
+  margin-top: 1rem;
+  margin-bottom: 1.4rem;
+  line-height: 1.5;
+  font-size: 1.4rem;
+}
