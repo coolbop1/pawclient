@@ -82,10 +82,10 @@
     <div class="container-fluid">
 
       <div class="form step-2">
-        <h1>MAKE A DONATION</h1>
-        <ul class="tab-group details">
-          <li class="tab"><a href="#signup">BILLING INFORMATION</a></li>
-
+        <h1>BILLING INFORMATION</h1>
+        <ul class="tab-group">
+          <li class="tab active"><a href="#signup">CARD PAYMENT</a></li>
+          <li class="tab "><a href="#signup">PAYPAL</a></li>
         </ul>
 
         <div class="tab-content">
@@ -307,13 +307,17 @@
   <!-- Active js -->
   <script src="js/active.js"></script>
   <script>
+    var selected_amount = sessionStorage.getItem('amount');
+    var description = sessionStorage.getItem('description');
+    var frequency = sessionStorage.getItem('frequency');
+    console.log("selected_amount", selected_amount);
       if (sessionStorage.getItem('checkoutid') === null){
       document.getElementById("amount_space").innerHTML = 
       ` <div class="field-wrap">
           <label>
             Amount $<span class="req">*</span>
           </label>
-          <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)"/>
+          <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)" value="${selected_amount}"/>
         </div>`;
       }
       </script>
