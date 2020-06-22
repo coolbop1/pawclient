@@ -83,8 +83,23 @@
       <div class="form">
         <h2>MAKE A DONATION</h2>
         <ul class="tab-group">
-          <li class="tab active"><a href="#signup">MONTHLY</a></li>
-          <li class="tab"><a href="#signup">ONE TIME OFF</a></li>
+          <script>
+          if(sessionStorage.getItem("frequency")) {
+            sessionStorage.getItem("frequency") == 1 ? document.write(`
+            <li class="tab"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab active"><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `) : document.write(`
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `);
+          } else {
+            document.write(`
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `)
+          }
+          </script>
+          
         </ul>
 
         <div class="tab-content">
@@ -116,22 +131,26 @@
               <div id="chgtext2">Your donation could pay for a kitten’s essential first vaccination. </div>
               <div class="select-price">
                 <a href="#"
+                  onclick="changeText2('20')"
+                  class="btn btn-outline-success price">&#36;&nbsp;20</a>&nbsp; &nbsp;
+
+
+                <a href="#"
+                  onclick="changeText2('25')"
+                  class="btn btn-outline-success price">&#36;&nbsp;25</a>&nbsp; &nbsp;
+
+
+                <a href="#"
+                  onclick="changeText2('50')"
+                  class="btn btn-outline-success price">&#36;&nbsp;50</a>&nbsp; &nbsp;
+
+                <a href="#"
                   onclick="changeText2('100')"
                   class="btn btn-outline-success price">&#36;&nbsp;100</a>&nbsp; &nbsp;
-
 
                 <a href="#"
                   onclick="changeText2('250')"
                   class="btn btn-outline-success price">&#36;&nbsp;250</a>&nbsp; &nbsp;
-
-
-                <a href="#"
-                  onclick="changeText2('500')"
-                  class="btn btn-outline-success price">&#36;&nbsp;500</a>&nbsp; &nbsp;
-
-                <a href="#"
-                  onclick="changeText2('1,250')"
-                  class="btn btn-outline-success price">&#36;&nbsp;1,250</a>&nbsp; &nbsp;
 
                 <a href="#" class="btn btn-outline-success price" id="replyb2"
                   onclick="changeText2('Type the amount you would like to donate. ', true)">&#36;&nbsp;Other</a>
@@ -256,9 +275,9 @@
   <!-- Active js -->
   <script src="js/active.js"></script>
   <script>
-    var selected_amount = 0;
-    var description = "";
-    var frequency = 0;
+    var selected_amount = sessionStorage.getItem("amount") ? sessionStorage.getItem("amount") : 0;
+    var description =sessionStorage.getItem("description") ? sessionStorage.getItem("description") : "";
+    var frequency = sessionStorage.getItem("frequency") ? sessionStorage.getItem("frequency") : 0;
     $('.form').find('input, textarea').on('keyup blur focus', function (e) {
 
       var $this = $(this),
@@ -304,6 +323,9 @@
     });
   </script>
   <script>
+    function changeFreqency(num) {
+      frequency = num
+    }
     function inputAmount() {
       description = "Monthly donation to Paw Salvation";
       var x = document.getElementById("reply");
