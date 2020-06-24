@@ -86,15 +86,15 @@
           <script>
           if(sessionStorage.getItem("frequency")) {
             sessionStorage.getItem("frequency") == 1 ? document.write(`
-            <li class="tab"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
             <li class="tab active"><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
             `) : document.write(`
-            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
             <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
             `);
           } else {
             document.write(`
-            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONE TIME OFF</a></li>
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
             <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
             `)
           }

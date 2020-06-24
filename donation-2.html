@@ -82,7 +82,7 @@
     <div class="container-fluid">
 
       <div class="form step-2">
-        <h1>BILLING INFORMATION<br><small class="myhide" id="pwarn">(One Time Off Payment via Paypal)</small></h1>
+        <h1>BILLING INFORMATION<br><small class="myhide" id="pwarn">(Just Once Payment via Paypal)</small></h1>
         <script>
           if (sessionStorage.getItem('checkoutid') === null) {
             document.write(`
@@ -155,7 +155,7 @@
               <div id="amount_space"></div>
              
 
-              <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" (Monthly)") : document.write(" (One off)");  </script></button>
+              <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" (Monthly)") : document.write(" (Once)");  </script></button>
 
               <!--<button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
