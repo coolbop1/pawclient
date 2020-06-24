@@ -2529,3 +2529,61 @@ input[type=number] {
  .myhide {
    display: none;
  }
+
+
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-box {
+position: relative;
+}
+
+
+.image-box__background,
+.image-box__overlay {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+.image-box__background {
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-image: var(--image-url);
+
+z-index: 1
+}
+
+.image-box__overlay {
+background: rgba(0, 0, 0, 0.5);
+
+z-index: 2;
+}
+
+.image-box__content {
+position: relative;
+
+z-index: 3;
+
+color: white;
+min-height: 100vh;
+display: center;
+align-items: center;
+justify-content: center;
+}
+
