@@ -1578,6 +1578,7 @@ label {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1656,7 +1657,6 @@ textarea {
     transition: all 0.5s ease;
     -webkit-appearance: none;
     text-align: center;
-    align-items: ;
 }
 .button:hover, .button:focus {
     background: transparent;
@@ -2073,8 +2073,10 @@ textarea {
     background-size: cover;
     background-repeat: none;
     transition: flex 0.8s ease;
-    &: hover{ flex: 7; };
 }
+
+.item:hover{ flex: 7; };
+
 .h3, h3 {
     font-size: 1.3rem;
 }
@@ -2221,10 +2223,6 @@ p.ads{
   background-size: cover;
   background-repeat: none;
   transition: flex 0.8s ease;
-  
-  &:hover{
-    flex: 7;
-  }
 }
 
 .item-1 { 
@@ -2256,12 +2254,12 @@ p.ads{
   position: absolute;
   right: 35px;
   bottom: 0;
-  
-  img{
-    display: block;
-    width: 32px;
-  }
+}  
+.social img{
+  display: block;
+  width: 32px;
 }
+
 
 .contain{
   padding: 0px;
