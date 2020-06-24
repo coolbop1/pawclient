@@ -168,8 +168,36 @@
 <div id="error-message"></div>
             </form>
             <div class="myhide" id="paypal-button-container"></div>
+            <script src="https://www.paypal.com/sdk/js?client-id=AQCB7Q8czIiVHAKNzZnNGxXTtOcfIMtOrcCdXXBNKs4hjTN6OAS-epL8fA1JDPRd78F7R7rFHALBids_&currency=USD"></script>
+
+    <script>
+        // Render the PayPal button into #paypal-button-container
+        paypal.Buttons({
+
+            // Set up the transaction
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: '0.01'
+                        }
+                    }]
+                });
+            },
+
+            // Finalize the transaction
+            onApprove: function(data, actions) {
+                return actions.order.capture().then(function(details) {
+                    // Show a success message to the buyer
+                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                });
+            }
+
+
+        }).render('#paypal-button-container');
+    </script>
  
-<script src="https://www.paypal.com/sdk/js?client-id=sb&commit=false"></script>
+<!--<script src="https://www.paypal.com/sdk/js?client-id=sb&commit=false"></script>
  
 <script>
  
@@ -255,8 +283,8 @@ paypal.Buttons({
     }
  
 }).render('#paypal-button-container');
- 
-</script>
+
+</script>-->
 
           </div>
 
