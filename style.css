@@ -1538,7 +1538,7 @@ a:hover {
     color: #006A34;
     font-size: 20px;
     float: left;
-    width: 50%;
+    width: 100%;
     text-align: center;
     cursor: pointer;
     transition: .5s ease;
@@ -1578,6 +1578,7 @@ label {
   color: rgba(255, 255, 255, 0.5);
   transition: all 0.25s ease;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   pointer-events: none;
   font-size: 22px;
 }
@@ -1656,7 +1657,6 @@ textarea {
     transition: all 0.5s ease;
     -webkit-appearance: none;
     text-align: center;
-    align-items: ;
 }
 .button:hover, .button:focus {
     background: transparent;
@@ -2073,7 +2073,6 @@ textarea {
     background-size: cover;
     background-repeat: none;
     transition: flex 0.8s ease;
-    &: hover{ flex: 7; };
 }
 .h3, h3 {
     font-size: 1.3rem;
@@ -2221,10 +2220,10 @@ p.ads{
   background-size: cover;
   background-repeat: none;
   transition: flex 0.8s ease;
-  
-  &:hover{
+}
+
+.items:hover{
     flex: 7;
-  }
 }
 
 .item-1 { 
@@ -2256,12 +2255,12 @@ p.ads{
   position: absolute;
   right: 35px;
   bottom: 0;
-  
-  img{
+} 
+.social  img{
     display: block;
     width: 32px;
-  }
 }
+
 
 .contain{
   padding: 0px;
@@ -2524,4 +2523,60 @@ input[type=number] {
   margin-bottom: 1.4rem;
   line-height: 1.5;
   font-size: 1.4rem;
+}
+
+.bg-text {
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 11%;
+  z-index: 2;
+  width: 80%;
+  padding: 20px;
+  text-align: center;
+}
+
+.image-box {
+position: relative;
+}
+
+
+.image-box__background,
+.image-box__overlay {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+}
+
+.image-box__background {
+background-size: cover;
+background-position: center center;
+background-repeat: no-repeat;
+background-image: var(--image-url);
+
+z-index: 1
+}
+
+.image-box__overlay {
+background: rgba(0, 0, 0, 0.5);
+
+z-index: 2;
+}
+
+.image-box__content {
+position: relative;
+
+z-index: 3;
+
+color: white;
+min-height: 100vh;
+display: center;
+align-items: center;
+justify-content: center;
 }

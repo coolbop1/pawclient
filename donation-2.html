@@ -82,18 +82,11 @@
     <div class="container-fluid">
 
       <div class="form step-2">
-        <h1>BILLING INFORMATION</h1>
-        <script>
-          if (sessionStorage.getItem('checkoutid') === null) {
-            document.write(`
-            <ul class="tab-group">
-              <li class="tab active"><a href="#signup">CARD PAYMENT</a></li>
-              <li class="tab "><a href="#signup">PAYPAL</a></li>
-            </ul>
-            `)
-          }
-        </script>
-        
+        <h1>MAKE A DONATION</h1>
+        <ul class="tab-group details">
+          <li class="tab"><a href="#signup">BILLING INFORMATION</a></li>
+
+        </ul>
 
         <div class="tab-content">
           <div id="signup">
@@ -155,7 +148,7 @@
               <div id="amount_space"></div>
              
 
-              <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" (Monthly)") : document.write(" (One off)");  </script></button>
+              <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step</button>
 
               <!--<button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
@@ -314,17 +307,13 @@
   <!-- Active js -->
   <script src="js/active.js"></script>
   <script>
-    var selected_amount = sessionStorage.getItem('amount');
-    var description = sessionStorage.getItem('description');
-    var frequency = sessionStorage.getItem('frequency');
-    console.log("selected_amount", selected_amount);
       if (sessionStorage.getItem('checkoutid') === null){
       document.getElementById("amount_space").innerHTML = 
       ` <div class="field-wrap">
-          <label class="active">
+          <label>
             Amount $<span class="req">*</span>
           </label>
-          <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)" value="${selected_amount}"/>
+          <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)"/>
         </div>`;
       }
       </script>

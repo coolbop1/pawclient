@@ -1,5 +1,5 @@
-var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
-//var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
+//var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
+var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
 var elements = stripe.elements();
 const paybutton = document.getElementById("paybutton");
 var defaultlabel;
@@ -48,7 +48,7 @@ function setOutcome(result) {
     const user_data = sessionStorage.getItem("user");
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
-    fetch("http://localhost:3000/api/charges", {
+    fetch("https://pawsalvation.herokuapp.com/api/charge", {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json; charset=UTF-8"

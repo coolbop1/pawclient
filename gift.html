@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -41,7 +38,7 @@
                     <nav class="classy-navbar justify-content-between" id="cryptosNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html"><a class="nav-brand" href="index.html"><img src="img/crop-logo.png" class="top-logo"  width="100" height="100" alt="logo"></a></a>
+                        <a class="nav-brand" href="index.html"></a><a class="nav-brand" href="index.html"><img src="img/crop-logo.png" class="top-logo" width="100" height="100" alt="logo"></a>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">
@@ -68,7 +65,7 @@
                                     
                                     
                                     <a href="donation.html" class="btn cryptos-btn sponsor m-1 text-white font-weight-bold">DONATE</a>
-                                   <a href="gift.html" class="btn cryptos-btn donate m-1 text-white font-weight-bold">Shop</a>
+                                   <a href="" class="btn cryptos-btn donate m-1 text-white font-weight-bold">Project Ignite</a>
                                 </ul>
 
                                 <!-- Newsletter Form -->
@@ -106,21 +103,21 @@
                 </div>            
                 <div class="col-sm-3 text-center">
                 <img src="img/products/hat-and-tee.png" width="300rem;" height="300rem;" class="shop-img">
-                
-                <p class="h4 donate-text line font-weight-bold mt-1">
-                   Branded Hat & T-Shirt
+                <br><br>
+                <p class="h4 donate-text line font-weight-bold">
+                   Branded Hat &amp; T-Shirt
                     <br>
-                     <p class="h4 new-product">
+                     </p><p class="h4 new-product">
                         HAT  &nbsp;&nbsp;  -  &nbsp;&nbsp;  $250.00 
                         <br>
                         TEE  &nbsp;&nbsp; -   &nbsp;&nbsp;   $200
                     </p> 
                         <p class="h5 new-product">All Proceeds Goes Into Providing A Meal A Day For A Pet. </p> 
                   
-                    </p>
+                    <p></p>
                      <div class="text-center">
                     <a href="javascript:void(0)"> 
-                        <button data-amount="50" data-description="Branded Hat & T-Shirt" id="sku_GYE4TydOFqbRYD" class="btn btn-sm btn-primary shop-btn">Shop Now</button></a>
+                        <button data-amount="50" data-description="Branded Hat &amp; T-Shirt" id="sku_GYE4TydOFqbRYD" class="btn btn-sm btn-primary shop-btn">Shop Now</button></a>
                     </div>
                     <br><br>
                 </div>
@@ -128,8 +125,8 @@
                 </div>
                 <div class="col-sm-3 text-center">
                    <img src="img/products/orange-hoodies.png" width="300rem;" height="300rem;" class="shop-img">
-              
-                <p class="h4 donate-text line font-weight-bold mt-2">
+                <br><br><br>
+                <p class="h4 donate-text line font-weight-bold">
                     Orange Hoodies
                     <br>
                     $250 
@@ -209,7 +206,7 @@
         <p class="h4 donate-text line font-weight-bold">
           Branded Cap
             <br>
-           <strike class="text-dark"> $850 </strike>  &nbsp;&nbsp;   FREE
+           <strike class="text-dark"> $80.00 </strike>  &nbsp;&nbsp;   FREE
             </p>
              <div class="text-center">
             <a href="javascript:void(0)"> 
@@ -239,7 +236,7 @@
         </div>
     </div>
             </div>
-        </section>
+        </div></div></section>
         <!--/#about--> <br><br> <br>
  </div>
 
@@ -285,13 +282,9 @@
                 <div class="col-sm-1">
                 </div>
                 <div class="col-sm-7 edoja-color">
-                    <p class="h6 d-inline line"> 
-                    &copy;
-                    <span id="copyright">
-                        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-                    </span>
-                     pawsalvation.com. &nbsp;All trademarks are owned by Paw Salvation Charity Organization.</p>
-              </div>
+                 <p class="h6 d-inline line">
+                    ©2019 pawsalvation.com. All trademarks are owned by Paw Salvation Charity Organization.</p>           
+                </div>
                 <div class="col-sm-4 edoja-color">
                     <div class="">
                         <ul class="social-icons">
@@ -331,77 +324,4 @@ function showSlides() {
 
 
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mousescroll.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/scroll.js"></script>
-<!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-
-
-<script>
-    
-    let checkoutButtons = document.getElementsByClassName("shop-btn");
-    for(let element of checkoutButtons) {
-        element.addEventListener('click', checkOut);
-        console.log(element)
-    }
-
-    function checkOut(e) {
-        let amount = e.target.getAttribute('data-amount');
-        let description = e.target.getAttribute('data-description');
-        let sku_id = e.target.getAttribute('id');
-        sessionStorage.setItem('amount', amount);
-        sessionStorage.setItem('checkoutid', sku_id);
-        sessionStorage.setItem('description', description);
-
-        window.location.href = 'donation-2.html';
-    }
-</script>
-  <!-- Start of Async Drift Code -->
-  <script>
-    "use strict";
-    
-    !function() {
-      var t = window.driftt = window.drift = window.driftt || [];
-      if (!t.init) {
-        if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-        t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ], 
-        t.factory = function(e) {
-          return function() {
-            var n = Array.prototype.slice.call(arguments);
-            return n.unshift(e), t.push(n), t;
-          };
-        }, t.methods.forEach(function(e) {
-          t[e] = t.factory(e);
-        }), t.load = function(t) {
-          var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-          o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-          var i = document.getElementsByTagName("script")[0];
-          i.parentNode.insertBefore(o, i);
-        };
-      }
-    }();
-    drift.SNIPPET_VERSION = '0.3.1';
-    drift.load('ed8tp9ggfxph');
-    </script>
-    <!-- End of Async Drift Code -->
-</body>
-
-</html>
+    <script src="js/jquery.js"></script></body></html>

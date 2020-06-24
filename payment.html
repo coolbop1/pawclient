@@ -1,16 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="shortcut icon" href="images/logo-1.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png" />
-  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png" />
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="images/logo-1.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/ico/apple-touch-icon-72-precomposed.png">
+  <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57-precomposed.png">
   <title>Donation</title>
   <style>
     * {
@@ -145,41 +142,41 @@
       font-size: 13px;
     }
   </style>
-</head>
-<script src="https://js.stripe.com/v3/"></script>
+<script src="https://js.stripe.com/v3/"></script></head>
 
-<body>
+
+<body data-gr-c-s-loaded="true" cz-shortcut-listen="true">
   <form method="POST">
-    <input type="hidden" name="token" />
+    <input type="hidden" name="token">
     <div class="group">
       <label>
         <span>Card number</span>
-        <div id="card-number-element" class="field"></div>
+        <div id="card-number-element" class="field StripeElement StripeElement--empty"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-99fc4c4cd46cc371238ffb50889328f5.html#style[base][iconColor]=%23666EE8&amp;style[base][color]=%2331325F&amp;style[base][lineHeight]=40px&amp;style[base][fontWeight]=300&amp;style[base][fontFamily]=Helvetica+Neue&amp;style[base][fontSize]=15px&amp;style[base][::placeholder][color]=%23CFD7E0&amp;placeholder=Card+number&amp;componentName=cardNumber&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;apiKey=pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W&amp;origin=https%3A%2F%2Fpawsalvation.com&amp;referrer=https%3A%2F%2Fpawsalvation.com%2Fpayment.html&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 40px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div>
       </label>
       <label>
         <span>Expiry date</span>
-        <div id="card-expiry-element" class="field"></div>
+        <div id="card-expiry-element" class="field StripeElement StripeElement--empty"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame6" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-99fc4c4cd46cc371238ffb50889328f5.html#style[base][iconColor]=%23666EE8&amp;style[base][color]=%2331325F&amp;style[base][lineHeight]=40px&amp;style[base][fontWeight]=300&amp;style[base][fontFamily]=Helvetica+Neue&amp;style[base][fontSize]=15px&amp;style[base][::placeholder][color]=%23CFD7E0&amp;placeholder=Expiry+date&amp;componentName=cardExpiry&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;apiKey=pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W&amp;origin=https%3A%2F%2Fpawsalvation.com&amp;referrer=https%3A%2F%2Fpawsalvation.com%2Fpayment.html&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 40px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div>
       </label>
       <label>
         <span>CVC</span>
-        <div id="card-cvc-element" class="field"></div>
+        <div id="card-cvc-element" class="field StripeElement StripeElement--empty"><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame7" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-99fc4c4cd46cc371238ffb50889328f5.html#style[base][iconColor]=%23666EE8&amp;style[base][color]=%2331325F&amp;style[base][lineHeight]=40px&amp;style[base][fontWeight]=300&amp;style[base][fontFamily]=Helvetica+Neue&amp;style[base][fontSize]=15px&amp;style[base][::placeholder][color]=%23CFD7E0&amp;placeholder=CVC&amp;componentName=cardCvc&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;apiKey=pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W&amp;origin=https%3A%2F%2Fpawsalvation.com&amp;referrer=https%3A%2F%2Fpawsalvation.com%2Fpayment.html&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; user-select: none !important; height: 40px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" aria-label=" " autocomplete="false" maxlength="1" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div>
       </label>
     </div>
-    <button id="paybutton" type="submit">DONATE $<span id="amount"></span></button>
+    <button id="paybutton" type="submit">DONATE $<span id="amount">673467</span></button>
     <div class="outcome">
       <div class="error"></div>
       <div class="success">
-        Donation Recieved! <br />
+        Donation Recieved! <br>
         <a style="text-decoration:none" href="index.html">CONTINUE TO HOMEPAGE</a>
       </div>
     </div>
   </form>
-</body>
-<script src="payment.js"></script>
+
+<script src="payment.js"></script><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeController1" allowpaymentrequest="true" src="https://js.stripe.com/v3/controller-b495b633c20bf164ee5e27d99cd81be9.html#apiKey=pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W&amp;stripeJsId=a216e887-db19-4458-9b80-95f93798e8cb&amp;startTime=8340.670000005048&amp;origin=https%3A%2F%2Fpawsalvation.com&amp;referrer=https%3A%2F%2Fpawsalvation.com%2Fpayment.html&amp;controllerId=__privateStripeController1" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe>
 <script>
   document.getElementById("amount").innerHTML = sessionStorage.getItem(
     "amount"
   );
 </script>
 
-</html>
+<iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeMetricsController0" allowpaymentrequest="true" src="https://js.stripe.com/v3/m-outer-bed6abdc0a0b5ea6d8e7eca78387ad54.html#url=https%3A%2F%2Fpawsalvation.com%2Fpayment.html&amp;title=Donation&amp;referrer=https%3A%2F%2Fpawsalvation.com%2Fdonation-2.html&amp;muid=d88dccd8-f98e-4a38-a668-8457b3c0d65d&amp;sid=c7928508-b07d-4e67-9a1c-b601d986a192&amp;preview=false" aria-hidden="true" tabindex="-1" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; visibility: hidden !important; position: fixed !important; height: 1px !important; pointer-events: none !important; user-select: none !important;"></iframe></body></html>
