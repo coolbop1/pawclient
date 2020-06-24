@@ -82,7 +82,7 @@
     <div class="container-fluid">
 
       <div class="form step-2">
-        <h1>BILLING INFORMATION</h1>
+        <h1>BILLING INFORMATION<br><small class="myhide" id="pwarn">(One Time Off Payment via Paypal)</small></h1>
         <script>
           if (sessionStorage.getItem('checkoutid') === null) {
             document.write(`
@@ -174,12 +174,18 @@
         // Render the PayPal button into #paypal-button-container
         paypal.Buttons({
 
+          style: {
+                label:  'pay',
+                tagline: false
+            },
+
+
             // Set up the transaction
             createOrder: function(data, actions) {
                 return actions.order.create({
                     purchase_units: [{
                         amount: {
-                            value: '0.01'
+                            value: `${sessionStorage.getItem('amount')}`
                         }
                     }]
                 });
@@ -189,7 +195,7 @@
             onApprove: function(data, actions) {
                 return actions.order.capture().then(function(details) {
                     // Show a success message to the buyer
-                    alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    alert('Donation successful  ' + details.payer.name.given_name + '!');
                 });
             }
 
@@ -440,8 +446,10 @@ paypal.Buttons({
       if(option === "paypal") {
         document.getElementById("bill-info").classList.replace("myshow","myhide");
         document.getElementById("paypal-button-container").classList.replace("myhide", "myshow");
+        document.getElementById("pwarn").classList.replace("myhide", "myshow");
       } else {
         document.getElementById("paypal-button-container").classList.replace("myshow","myhide");
+        document.getElementById("pwarn").classList.replace("myshow","myhide");
         document.getElementById("bill-info").classList.replace("myhide", "myshow");
       }
 
