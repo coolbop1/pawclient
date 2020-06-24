@@ -87,8 +87,8 @@
           if (sessionStorage.getItem('checkoutid') === null) {
             document.write(`
             <ul class="tab-group">
-              <li class="tab active"><a href="#signup">CARD PAYMENT</a></li>
-              <li class="tab "><a href="#signup">PAYPAL</a></li>
+              <li onclick="togglePaymentOption('card')" class="tab active"><a href="#signup">CARD PAYMENT</a></li>
+              <li onclick="togglePaymentOption('paypal')" class="tab "><a href="#signup">PAYPAL</a></li>
             </ul>
             `)
           }
@@ -98,7 +98,7 @@
         <div class="tab-content">
           <div id="signup">
 
-            <form action="javascript:gotoPayment()" method="">
+            <form id="bill-info" class="myshow" action="javascript:gotoPayment()" method="">
 
 
               <div class="field-wrap">
@@ -167,6 +167,96 @@
 
 <div id="error-message"></div>
             </form>
+            <div class="myhide" id="paypal-button-container"></div>
+ 
+<script src="https://www.paypal.com/sdk/js?client-id=sb&commit=false"></script>
+ 
+<script>
+ 
+paypal.Buttons({
+ 
+    env: 'sandbox', /* sandbox | production */
+    style: {
+                layout: 'horizontal',   // horizontal | vertical 
+                size:   'responsive',   /* medium | large | responsive*/
+                shape:  'pill',         /* pill | rect*/
+                color:  'gold',         /* gold | blue | silver | black*/
+                fundingicons: false,    /* true | false */
+                tagline: false          /* true | false */
+            }, 
+ 
+      /* createOrder() is called when the button is clicked */
+ 
+    createOrder: function() {
+ 
+ 
+        /* Set up a url on your server to create the order */
+ 
+        var CREATE_URL = 'http://localhost:3000/api/paypal';
+ 
+ 
+        /* Make a call to your server to set up the payment */
+ 
+        return fetch(CREATE_URL)
+         .then(function(res) {
+          return res.json();
+         }).then(function(data) {
+          return data.data.id;
+         });
+ 
+    },
+ 
+ 
+ 
+ 
+    /* onApprove() is called when the buyer approves the payment */
+ 
+    onApprove: function(data, actions) {
+
+      console.log("Get order id", data);
+ 
+        /* Set up a url on your server to execute the payment */
+ 
+        var EXECUTE_URL = '/example/executePayment';
+ 
+        /* Set up the data you need to pass to your server */
+ 
+        /* Make a call to your server to execute the payment */
+ 
+        /*return fetch('http://localhost:3000/api/capture-paypal-transaction', {
+          method: "POST",
+          headers: new Headers({
+          "Content-Type": "application/json; charset=UTF-8"
+        }),
+         body: JSON.stringify({
+          orderID: data.orderID,
+          tokens: data.facilitatorAccessToken
+         })
+        })
+        .then(function(res) {
+         return res.json();
+        }).then(function(details) {
+         alert('Transaction funds captured from ' + details.payer_given_name);
+        });*/
+
+        return fetch(`https://api.sandbox.paypal.com/v2/checkout/orders/${data.orderID}/capture`, {
+          method: "POST",
+          headers: new Headers({
+            Accept:        `application/json`,
+            Authorization: `Bearer ${data.facilitatorAccessToken}`,
+            "Content-Type": "application/json; charset=UTF-8"
+          })
+        }).then(function(res) {
+         return res.json();
+        }).then(function(details) {
+         alert('Transaction funds captured from ' + details.payer_given_name);
+        });
+ 
+    }
+ 
+}).render('#paypal-button-container');
+ 
+</script>
 
           </div>
 
@@ -318,6 +408,16 @@
     var description = sessionStorage.getItem('description');
     var frequency = sessionStorage.getItem('frequency');
     console.log("selected_amount", selected_amount);
+    function togglePaymentOption(option) {
+      if(option === "paypal") {
+        document.getElementById("bill-info").classList.replace("myshow","myhide");
+        document.getElementById("paypal-button-container").classList.replace("myhide", "myshow");
+      } else {
+        document.getElementById("paypal-button-container").classList.replace("myshow","myhide");
+        document.getElementById("bill-info").classList.replace("myhide", "myshow");
+      }
+
+    }
       if (sessionStorage.getItem('checkoutid') === null){
       document.getElementById("amount_space").innerHTML = 
       ` <div class="field-wrap">
@@ -327,6 +427,40 @@
           <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)" value="${selected_amount}"/>
         </div>`;
       }
+
+
+    /*fetch(PAYPAL_OAUTH_API, {
+      method: "POST",
+      headers: new Headers({
+        Accept:        `application/json`,
+    Authorization: `Basic ${ basicAuth }`
+        //"DataServiceVersion": 2.0
+      }),
+      body: JSON.stringify({
+      "grant_type" : "client_credentials"
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        const { status } = data;
+        console.log("data", data);
+      })
+      .catch(err => console.log(err));*/
+
+
+
+      /*fetch("http://localhost:3000/api/paypals", {
+      method: "GET",
+      headers: new Headers({
+        Accept:        `application/json`
+      })
+    })
+      .then(res => res.json())
+      .then(data => {
+        const { status } = data;
+        console.log("data", data);
+      })
+      .catch(err => console.log(err));*/
       </script>
   <script>
     $('.form').find('input,option, textarea').on('keyup blur focus', function (e) {

@@ -48,7 +48,8 @@ function setOutcome(result) {
     const user_data = sessionStorage.getItem("user");
     const { email, firstname, lastname, address } = JSON.parse(user_data);
     const amount = sessionStorage.getItem("amount");
-    fetch("http://localhost:3000/api/charges", {
+    const url = sessionStorage.getItem("frequency") == 1 ? `http://localhost:3000/api/charges` : `http://localhost:3000/api/charge`;
+    fetch(url, {
       method: "POST",
       headers: new Headers({
         "Content-Type": "application/json; charset=UTF-8"

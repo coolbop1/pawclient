@@ -2525,3 +2525,9 @@ input[type=number] {
   line-height: 1.5;
   font-size: 1.4rem;
 }
+ .myshow {
+   display: block;
+ }
+ .myhide {
+   display: none;
+ }
