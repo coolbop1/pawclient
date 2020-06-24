@@ -1,5 +1,5 @@
-var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
-//var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
+//var stripe = Stripe("pk_test_r7XtqMfzl0rITTrvFCNlswtQ00ipmL3xhq");
+var stripe = Stripe("pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W");
 var elements = stripe.elements();
 const paybutton = document.getElementById("paybutton");
 var defaultlabel;
