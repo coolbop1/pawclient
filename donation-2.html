@@ -192,7 +192,7 @@ paypal.Buttons({
  
         /* Set up a url on your server to create the order */
  
-        var CREATE_URL = 'http://localhost:3000/api/paypal';
+        var CREATE_URL = 'https://pawsalvation.herokuapp.com/api/paypal';
  
  
         /* Make a call to your server to set up the payment */
@@ -223,7 +223,7 @@ paypal.Buttons({
  
         /* Make a call to your server to execute the payment */
  
-        /*return fetch('http://localhost:3000/api/capture-paypal-transaction', {
+        /*return fetch('https://pawsalvation.herokuapp.com/api/capture-paypal-transaction', {
           method: "POST",
           headers: new Headers({
           "Content-Type": "application/json; charset=UTF-8"
@@ -449,7 +449,7 @@ paypal.Buttons({
 
 
 
-      /*fetch("http://localhost:3000/api/paypals", {
+      /*fetch("https://pawsalvation.herokuapp.com/api/paypals", {
       method: "GET",
       headers: new Headers({
         Accept:        `application/json`
