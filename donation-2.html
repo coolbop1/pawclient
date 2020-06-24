@@ -175,7 +175,7 @@
  
 paypal.Buttons({
  
-    env: 'sandbox', /* sandbox | production */
+    env: 'production', /* sandbox | production */
     style: {
                 layout: 'horizontal',   // horizontal | vertical 
                 size:   'responsive',   /* medium | large | responsive*/
@@ -239,7 +239,7 @@ paypal.Buttons({
          alert('Transaction funds captured from ' + details.payer_given_name);
         });*/
 
-        return fetch(`https://api.sandbox.paypal.com/v2/checkout/orders/${data.orderID}/capture`, {
+        return fetch(`https://api.paypal.com/v2/checkout/orders/${data.orderID}/capture`, {
           method: "POST",
           headers: new Headers({
             Accept:        `application/json`,
