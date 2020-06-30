@@ -2546,8 +2546,21 @@ input[type=number] {
   text-align: center;
 }
 
+@media only screen and (max-width: 567px) {
+.bg-text {
+  left: 5%;
+  width: 90%;
+}
+
+.about-page{
+  font-size: 15px;
+}
+}
+
 .image-box {
 position: relative;
+padding-top: 10rem;
+padding-bottom: 5rem;
 }
 
 
