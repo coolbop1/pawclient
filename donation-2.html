@@ -2,109 +2,109 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://js.stripe.com/v3/"></script>
-  <!-- Title -->
-  <title>Paw Salvation</title>
-  <link href="new/css/main.css" rel="stylesheet">
-  <!-- Favicon -->
-  <link rel="icon" href="img/core-img/favicon.ico">
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+    <!-- Title -->
+    <title>Paw Salvation</title>
+    <link href="new/css/main.css" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/favicon.ico">
 
-  <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
 
-  <!-- ##### Header Area Start ##### -->
-  <header class="header-area">
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
 
 
-    <!-- Navbar Area -->
-    <div class="cryptos-main-menu">
-      <div class="classy-nav-container breakpoint-off">
-        <div class="container">
-          <!-- Menu -->
-          <nav class="classy-navbar justify-content-between" id="cryptosNav">
+        <!-- Navbar Area -->
+        <div class="cryptos-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="cryptosNav">
 
-            <!-- Logo -->
-            <a class="nav-brand" href="index.html"><a class="nav-brand" href="index.html"><img src="img/crop-logo.png"
-                  class="top-logo" width="100" height="100" alt="logo"></a></a>
+                        <!-- Logo -->
+                        <a class="nav-brand" href="index.html">
+                            <a class="nav-brand" href="index.html"><img src="img/crop-logo.png" class="top-logo" width="100" height="100" alt="logo"></a>
+                        </a>
 
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Nav Start -->
+                            <div class="classynav">
+                                <ul>
+
+                                    <img src="img/security.png" class="top-logo" width="100" height="100" alt="logo">
+                                </ul>
+
+                                <!-- Newsletter Form -->
+                            </div>
+
+                            <!-- Nav End -->
+                        </div>
+                    </nav>
+                </div>
             </div>
-
-            <!-- Menu -->
-            <div class="classy-menu">
-
-              <!-- close btn -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-              </div>
-
-              <!-- Nav Start -->
-              <div class="classynav">
-                <ul>
-
-                  <img src="img/security.png" class="top-logo" width="100" height="100" alt="logo">
-                </ul>
-
-                <!-- Newsletter Form -->
-              </div>
-
-              <!-- Nav End -->
-            </div>
-          </nav>
         </div>
-      </div>
-    </div>
-  </header>
-  <!-- ##### Header Area End ##### -->
-  <br><br>
-  <!-- ##### Hero Area End ##### -->
+    </header>
+    <!-- ##### Header Area End ##### -->
+    <br><br>
+    <!-- ##### Hero Area End ##### -->
 
 
-  <!-- ##### Course Area Start ##### -->
-  <div class="cryptos-feature-area img-fluid donate-bg plays">
+    <!-- ##### Course Area Start ##### -->
+    <div class="cryptos-feature-area img-fluid donate-bg plays">
 
-    <div class="container-fluid">
+        <div class="container-fluid">
 
-      <div class="form step-2">
-        <h1>BILLING INFORMATION<br><small class="myhide" id="pwarn">(Just Once Payment via Paypal)</small></h1>
-        <script>
-          if (sessionStorage.getItem('checkoutid') === null) {
-            document.write(`
+            <div class="form step-2">
+                <h1>BILLING INFORMATION<br><small class="myhide" id="pwarn">(Just Once Payment via Paypal)</small></h1>
+                <script>
+                    if (sessionStorage.getItem('checkoutid') === null) {
+                        document.write(`
             <ul class="tab-group">
-              <li onclick="togglePaymentOption('card')" class="tab active"><a href="#signup">CARD PAYMENT</a></li>
+              <li onclick="togglePaymentOption('card')" class="tab active"><a href="#signup">CARD </a></li>
               <li onclick="togglePaymentOption('paypal')" class="tab "><a href="#signup">PAYPAL</a></li>
             </ul>
             `)
-          }
-        </script>
-        
-
-        <div class="tab-content">
-          <div id="signup">
-
-            <form id="bill-info" class="myshow" action="javascript:gotoPayment()" method="">
+                    }
+                </script>
 
 
-              <div class="field-wrap">
-                <select id="inputState" class="required" required="" autocomplete="off"
-                  style="height: 100%;width: 100%;padding:10px;font-size: 22px;background: none;border: 1px solid #a0b3b0;color: #A6A19D !important;display: block;font-weight: 600;">
-                  <option selected="" value="" class="jump">Title *</option>
+                <div class="tab-content">
+                    <div id="signup">
+
+                        <form id="bill-info" class="myshow" action="javascript:gotoPayment()" method="">
+
+
+                            <div class="field-wrap">
+                                <select id="inputState" class="required" required="" autocomplete="off" style="height: 100%;width: 100%;padding:10px;font-size: 15px;background: none;border: 1px solid #a0b3b0;color: #A6A19D !important;display: block;font-weight: 600;">
+                  <option selected="" value=""   disabled="disabled" class="jump">Title *</option>
                   <option>Miss</option>
                   <option>Ms</option>
                   <option>Mr</option>
@@ -114,50 +114,50 @@
                   <option>Reverend</option>
                   <option>None</option>
                 </select>
-              </div>
+                            </div>
 
-              <div class="top-row">
-                <div class="field-wrap">
-                  <label>
+                            <div class="top-row">
+                                <div class="field-wrap">
+                                    <label>
                     First Name<span class="req">*</span>
                   </label>
-                  <input type="text" id="firstname" required autocomplete="off" />
-                </div>
+                                    <input type="text" id="firstname" required autocomplete="off" />
+                                </div>
 
-                <div class="field-wrap">
-                  <label>
+                                <div class="field-wrap">
+                                    <label>
                     Last Name<span class="req">*</span>
                   </label>
-                  <input type="text" id="lastname" required autocomplete="off" />
-                </div>
-              </div>
+                                    <input type="text" id="lastname" required autocomplete="off" />
+                                </div>
+                            </div>
 
-              <div class="field-wrap">
-                <label>
+                            <div class="field-wrap">
+                                <label>
                   Address<span class="req">*</span>
                 </label>
-                <input type="text" id="address" required autocomplete="off" id="inputAddress2" />
-              </div>
+                                <input type="text" id="address" required autocomplete="off" id="inputAddress2" />
+                            </div>
 
-              <div class="field-wrap">
-                <label>
+                            <div class="field-wrap">
+                                <label>
                   Email Address<span class="req">*</span>
                 </label>
-                <input type="email" id="email" required autocomplete="off" />
-              </div>
+                                <input type="email" id="email" required autocomplete="off" />
+                            </div>
 
-              <div class="field-wrap">
-                <label>
+                            <div class="field-wrap">
+                                <label>
                   Contact Phone<span class="req">*</span>
                 </label>
-                <input id="phone" type="tel" required autocomplete="off" name="someid" onkeypress="return isNumberKey(event)" />
-              </div>
-              <div id="amount_space"></div>
-             
+                                <input id="phone" type="tel" required autocomplete="off" name="someid" onkeypress="return isNumberKey(event)" />
+                            </div>
+                            <div id="amount_space"></div>
 
-              <button id="checkout-button" type="submit"  class="button button-block overlay" style="margin: auto;padding: auto;">Next Step <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" (Monthly)") : document.write(" (Once)");  </script></button>
 
-              <!--<button
+                            <button id="checkout-button" type="submit" class="button button-block overlay" style="margin: auto;padding: auto;">Next <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" ") : document.write("");  </script></button>
+
+                            <!--<button
   style="background-color:#6772E5;color:#FFF;padding:8px 12px;border:0;border-radius:4px;font-size:1em"
   id="checkout-button-sku_GH3FDGZBjSdluJ"
   role="link"
@@ -165,45 +165,45 @@
   Checkout
 </button>-->
 
-<div id="error-message"></div>
-            </form>
-            <div class="myhide" id="paypal-button-container"></div>
-            <script src="https://www.paypal.com/sdk/js?client-id=AQCB7Q8czIiVHAKNzZnNGxXTtOcfIMtOrcCdXXBNKs4hjTN6OAS-epL8fA1JDPRd78F7R7rFHALBids_&currency=USD"></script>
+                            <div id="error-message"></div>
+                        </form>
+                        <div class="myhide" id="paypal-button-container"></div>
+                        <script src="https://www.paypal.com/sdk/js?client-id=AQCB7Q8czIiVHAKNzZnNGxXTtOcfIMtOrcCdXXBNKs4hjTN6OAS-epL8fA1JDPRd78F7R7rFHALBids_&currency=USD"></script>
 
-    <script>
-        // Render the PayPal button into #paypal-button-container
-        paypal.Buttons({
+                        <script>
+                            // Render the PayPal button into #paypal-button-container
+                            paypal.Buttons({
 
-          style: {
-                label:  'pay',
-                tagline: false
-            },
-
-
-            // Set up the transaction
-            createOrder: function(data, actions) {
-                return actions.order.create({
-                    purchase_units: [{
-                        amount: {
-                            value: `${sessionStorage.getItem('amount')}`
-                        }
-                    }]
-                });
-            },
-
-            // Finalize the transaction
-            onApprove: function(data, actions) {
-                return actions.order.capture().then(function(details) {
-                    // Show a success message to the buyer
-                    alert('Donation successful  ' + details.payer.name.given_name + '!');
-                });
-            }
+                                style: {
+                                    label: 'pay',
+                                    tagline: false
+                                },
 
 
-        }).render('#paypal-button-container');
-    </script>
- 
-<!--<script src="https://www.paypal.com/sdk/js?client-id=sb&commit=false"></script>
+                                // Set up the transaction
+                                createOrder: function(data, actions) {
+                                    return actions.order.create({
+                                        purchase_units: [{
+                                            amount: {
+                                                value: `${sessionStorage.getItem('amount')}`
+                                            }
+                                        }]
+                                    });
+                                },
+
+                                // Finalize the transaction
+                                onApprove: function(data, actions) {
+                                    return actions.order.capture().then(function(details) {
+                                        // Show a success message to the buyer
+                                        alert('Donation successful  ' + details.payer.name.given_name + '!');
+                                    });
+                                }
+
+
+                            }).render('#paypal-button-container');
+                        </script>
+
+                        <!--<script src="https://www.paypal.com/sdk/js?client-id=sb&commit=false"></script>
  
 <script>
  
@@ -292,200 +292,188 @@ paypal.Buttons({
 
 </script>-->
 
-          </div>
+                    </div>
 
-          <div id="login">
+                    <div id="login">
 
-            <form action="/" method="post">
-
-
-
-              <div id="chgtext2">Your donation could pay for a kitten’s essential first vaccination. </div>
-              <div class="select-price">
-                <a href="#"
-                  onclick="changeText2('Your donation of $100 could pay for a kitten’s essential first vaccination. ')"
-                  class="btn btn-outline-success price">&#36;&nbsp;100</a>&nbsp; &nbsp;
+                        <form action="/" method="post">
 
 
-                <a href="#"
-                  onclick="changeText2('Your donation of $250 could pay for a kitten’s essential first vaccination. ')"
-                  class="btn btn-outline-success price">&#36;&nbsp;250</a>&nbsp; &nbsp;
+
+                            <div id="chgtext2">Your donation could pay for a kitten’s essential first vaccination. </div>
+                            <div class="select-price">
+                                <a href="#" onclick="changeText2('Your donation of $100 could pay for a kitten’s essential first vaccination. ')" class="btn btn-outline-success price">&#36;&nbsp;100</a>&nbsp; &nbsp;
 
 
-                <a href="#"
-                  onclick="changeText2('Your donation of $500 could pay for a kitten’s essential first vaccination. ')"
-                  class="btn btn-outline-success price">&#36;&nbsp;500</a>&nbsp; &nbsp;
-
-                <a href="#"
-                  onclick="changeText2('Your donation of $1,250 could pay for a kitten’s essential first vaccination. ')"
-                  class="btn btn-outline-success price">&#36;&nbsp;1,250</a>&nbsp; &nbsp;
-
-                <a href="#" class="btn btn-outline-success price" id="replyb2"
-                  onclick="changeText2('Type the amount you would like to donate. ')">&#36;&nbsp;Other</a>
-
-                <br><br>
-                <input type="number" min="10" id="reply2" class="form-control col-sm-4 m-c" placeholder="$"
-                  style="margin: auto;margin-top: 1rem;display: none;" />
-
-              </div>
+                                <a href="#" onclick="changeText2('Your donation of $250 could pay for a kitten’s essential first vaccination. ')" class="btn btn-outline-success price">&#36;&nbsp;250</a>&nbsp; &nbsp;
 
 
-              <div class="mt-50 text-center">
-                <button disabled href="donation-2.html" class="btn btn-donate-1 btn-md btn-ls 
+                                <a href="#" onclick="changeText2('Your donation of $500 could pay for a kitten’s essential first vaccination. ')" class="btn btn-outline-success price">&#36;&nbsp;500</a>&nbsp; &nbsp;
+
+                                <a href="#" onclick="changeText2('Your donation of $1,250 could pay for a kitten’s essential first vaccination. ')" class="btn btn-outline-success price">&#36;&nbsp;1,250</a>&nbsp; &nbsp;
+
+                                <a href="#" class="btn btn-outline-success price" id="replyb2" onclick="changeText2('Type the amount you would like to donate. ')">&#36;&nbsp;Other</a>
+
+                                <br><br>
+                                <input type="number" min="10" id="reply2" class="form-control col-sm-4 m-c" placeholder="$" style="margin: auto;margin-top: 1rem;display: none;" />
+
+                            </div>
+
+
+                            <div class="mt-50 text-center">
+                                <button disabled href="donation-2.html" class="btn btn-donate-1 btn-md btn-ls 
                  text-white font-weight-bold m-b" id="vest">Donate</button>
-              </div>
+                            </div>
 
-              <br>
+                            <br>
 
-              <div data-v-102623f8="" class="strip">
-                <div data-v-102623f8=""><img data-v-102623f8="" src="img/payment-strip.jpg" class=""></div>
-              </div>
+                            <div data-v-102623f8="" class="strip">
+                                <div data-v-102623f8=""><img data-v-102623f8="" src="img/payment-strip.jpg" class=""></div>
+                            </div>
 
-            </form>
-          </div>
-          
+                        </form>
+                    </div>
 
-        </div><!-- tab-content -->
 
-      </div> <!-- /form -->
+                </div>
+                <!-- tab-content -->
 
+            </div>
+            <!-- /form -->
+
+        </div>
     </div>
-  </div>
-  <!-- ##### Course Area End ##### -->
+    <!-- ##### Course Area End ##### -->
 
 
 
-  <footer id="footer" class="footer-donate">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-1">
-        </div>
-        <div class="col-sm-4 edoja-color">
-          <p class="h3 respect font-weight-bold d-inline">PAW SALVATION</p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="about.html">About Paw Salvation</a> </p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">Policy</a></p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">pet care topics</a> </p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">sitemap</a></p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">privacy policy</a> </p>
-          <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">about our ads</a> </p>
-        </div>
-        <div class="col-sm-1">
-        </div>
+    <footer id="footer" class="footer-donate">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-4 edoja-color">
+                    <p class="h3 respect font-weight-bold d-inline">PAW SALVATION</p>
+                    <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="about.html">About Paw Salvation</a> </p>
+                    <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="">ABOUT OUR ADS</a></p>
+                    <p class="h5 d-inline up-case" style="margin-top: 2rem;"><a href="volunteer.html">Volunteer</a> </p>
+                </div>
+                <div class="col-sm-1">
+                </div>
 
-        <div class="col-sm-5 edoja-color">
-          <br>
-          <p class="h5 line respect d-inline">Get the latest on our progress,
-            sign up for the PawSalvation newsletter.</p>
-          <br>
-          <p class="h5 line respect d-inline">PO BOX 489 POSEN, IL 60469</p>
+                <div class="col-sm-5 edoja-color">
+                    <br>
+                    <p class="h5 line respect d-inline">Get the latest on our progress, sign up for the PawSalvation newsletter.</p>
+                    <br>
+                    <p class="h5 line respect d-inline">PO BOX 489 POSEN, IL 60469</p>
 
-          <p class="h5 d-inline">
-            <a href="tel:+217518642">Phone number: +1 (217) 518 6428</a></p>
+                    <p class="h5 d-inline">
+                        <a href="tel:+217518642">Phone number: +1 (217) 518 6428</a></p>
 
-          <p class="h5 d-inline">
-            <a href="mailto:info@pawsalvation.com"> Email: info@pawsalvation.com</a></p>
+                    <p class="h5 d-inline">
+                        <a href="mailto:info@pawsalvation.com"> Email: info@pawsalvation.com</a></p>
+                </div>
+                <div class="col-sm-1">
+                </div>
+            </div>
         </div>
-        <div class="col-sm-1">
-        </div>
-      </div>
-    </div>
-  </footer>
-  <footer id="footer" class="footer-down">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-1">
-        </div>
-        <div class="col-sm-7 edoja-color">
-          <p class="h6 d-inline line"> 
-          &copy;
-          <span id="copyright">
+    </footer>
+    <footer id="footer" class="footer-down">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-1">
+                </div>
+                <div class="col-sm-7 edoja-color">
+                    <p class="h6 d-inline line">
+                        &copy;
+                        <span id="copyright">
               <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
-          </span>
-           pawsalvation.com. &nbsp;All trademarks are owned by Paw Salvation Charity Organization.</p>
-    </div>
-        <div class="col-sm-4 edoja-color">
-          <div class="">
-            <ul class="social-icons">
-              <li><a href="https://www.facebook.com/pawsalvatn" target="_blank"><img
-                    src="https://cdn2.iconfinder.com/data/icons/social-flat/512/facebook-128.png" width="32px;"
-                    height="32px;"></a></li>
-              <li><a href="https://twitter.com/PawSalvation" target="_blank"><img
-                    src="https://cdn2.iconfinder.com/data/icons/social-flat/512/twitter-128.png" width="32px"
-                    height="32px;"></a></li>
-              <li><a href="" target="_blank"><img
-                    src="https://cdn2.iconfinder.com/data/icons/social-flat/512/youtube-128.png" width="32px"
-                    height="32px;"></a></li>
-              <li><a href="https://www.instagram.com/pawsalvation/" target="_blank"><img
-                    src="https://cdn2.iconfinder.com/data/icons/social-flat/512/instagram-128.png" width="32px"
-                    height="32px;"></a></li>
-            </ul>
-          </div>
+          </span> pawsalvation.com. &nbsp;All trademarks are owned by Paw Salvation Charity Organization.</p>
+                </div>
+                <div class="col-sm-4 edoja-color">
+                    <div class="">
+                        <ul class="social-icons">
+                            <li>
+                                <a href="https://www.facebook.com/pawsalvatn" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-flat/512/facebook-128.png" width="32px;" height="32px;"></a>
+                            </li>
+                            <li>
+                                <a href="https://twitter.com/PawSalvation" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-flat/512/twitter-128.png" width="32px" height="32px;"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/channel/UCQBEGMIcn-_n4vaXY39hOsg" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-flat/512/youtube-128.png" width="32px" height="32px;"></a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/pawsalvation/" target="_blank"><img src="https://cdn2.iconfinder.com/data/icons/social-flat/512/instagram-128.png" width="32px" height="32px;"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
         </div>
+    </footer>
+    <!-- ##### Footer Area Start ##### -->
+    <!-- ##### All Javascript Script ##### -->
+    <!-- jQuery-2.2.4 js -->
+    <script src="js/jquery/jquery-2.2.4.min.js"></script>
+    <!-- Popper js -->
+    <script src="js/bootstrap/popper.min.js"></script>
+    <!-- Bootstrap js -->
+    <script src="js/bootstrap/bootstrap.min.js"></script>
+    <!-- All Plugins js -->
+    <script src="js/plugins/plugins.js"></script>
+    <!-- Active js -->
+    <script src="js/active.js"></script>
+    <script>
+        var selected_amount = sessionStorage.getItem('amount');
+        var description = sessionStorage.getItem('description');
+        var frequency = sessionStorage.getItem('frequency');
+        console.log("selected_amount", selected_amount);
 
-      </div>
-    </div>
-  </footer>
-  <!-- ##### Footer Area Start ##### -->
-  <!-- ##### All Javascript Script ##### -->
-  <!-- jQuery-2.2.4 js -->
-  <script src="js/jquery/jquery-2.2.4.min.js"></script>
-  <!-- Popper js -->
-  <script src="js/bootstrap/popper.min.js"></script>
-  <!-- Bootstrap js -->
-  <script src="js/bootstrap/bootstrap.min.js"></script>
-  <!-- All Plugins js -->
-  <script src="js/plugins/plugins.js"></script>
-  <!-- Active js -->
-  <script src="js/active.js"></script>
-  <script>
-    var selected_amount = sessionStorage.getItem('amount');
-    var description = sessionStorage.getItem('description');
-    var frequency = sessionStorage.getItem('frequency');
-    console.log("selected_amount", selected_amount);
-    function togglePaymentOption(option) {
-      if(option === "paypal") {
-        document.getElementById("bill-info").classList.replace("myshow","myhide");
-        document.getElementById("paypal-button-container").classList.replace("myhide", "myshow");
-        document.getElementById("pwarn").classList.replace("myhide", "myshow");
-      } else {
-        document.getElementById("paypal-button-container").classList.replace("myshow","myhide");
-        document.getElementById("pwarn").classList.replace("myshow","myhide");
-        document.getElementById("bill-info").classList.replace("myhide", "myshow");
-      }
+        function togglePaymentOption(option) {
+            if (option === "paypal") {
+                document.getElementById("bill-info").classList.replace("myshow", "myhide");
+                document.getElementById("paypal-button-container").classList.replace("myhide", "myshow");
+                document.getElementById("pwarn").classList.replace("myhide", "myshow");
+            } else {
+                document.getElementById("paypal-button-container").classList.replace("myshow", "myhide");
+                document.getElementById("pwarn").classList.replace("myshow", "myhide");
+                document.getElementById("bill-info").classList.replace("myhide", "myshow");
+            }
 
-    }
-      if (sessionStorage.getItem('checkoutid') === null){
-      document.getElementById("amount_space").innerHTML = 
-      ` <div class="field-wrap">
+        }
+        if (sessionStorage.getItem('checkoutid') === null) {
+            document.getElementById("amount_space").innerHTML =
+                ` <div class="field-wrap">
           <label class="active">
             Amount $<span class="req">*</span>
           </label>
           <input type="number" required autocomplete="off" id="amount" min="1" onkeypress="return isNumberKey(event)" value="${selected_amount}"/>
         </div>`;
-      }
+        }
 
 
-    /*fetch(PAYPAL_OAUTH_API, {
-      method: "POST",
-      headers: new Headers({
-        Accept:        `application/json`,
-    Authorization: `Basic ${ basicAuth }`
-        //"DataServiceVersion": 2.0
-      }),
-      body: JSON.stringify({
-      "grant_type" : "client_credentials"
-      })
-    })
-      .then(res => res.json())
-      .then(data => {
-        const { status } = data;
-        console.log("data", data);
-      })
-      .catch(err => console.log(err));*/
+        /*fetch(PAYPAL_OAUTH_API, {
+          method: "POST",
+          headers: new Headers({
+            Accept:        `application/json`,
+        Authorization: `Basic ${ basicAuth }`
+            //"DataServiceVersion": 2.0
+          }),
+          body: JSON.stringify({
+          "grant_type" : "client_credentials"
+          })
+        })
+          .then(res => res.json())
+          .then(data => {
+            const { status } = data;
+            console.log("data", data);
+          })
+          .catch(err => console.log(err));*/
 
 
 
-      /*fetch("https://pawsalvation.herokuapp.com/api/paypals", {
+        /*fetch("https://pawsalvation.herokuapp.com/api/paypals", {
       method: "GET",
       headers: new Headers({
         Accept:        `application/json`
@@ -497,194 +485,198 @@ paypal.Buttons({
         console.log("data", data);
       })
       .catch(err => console.log(err));*/
-      </script>
-  <script>
-    $('.form').find('input,option, textarea').on('keyup blur focus', function (e) {
+    </script>
+    <script>
+        $('.form').find('input,option, textarea').on('keyup blur focus', function(e) {
 
-      var $this = $(this),
-        label = $this.prev('label');
+            var $this = $(this),
+                label = $this.prev('label');
 
-      if (e.type === 'keyup') {
-        if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.addClass('active highlight');
-        }
-      } else if (e.type === 'blur') {
-        if ($this.val() === '') {
-          label.removeClass('active highlight');
-        } else {
-          label.removeClass('highlight');
-        }
-      } else if (e.type === 'focus') {
+            if (e.type === 'keyup') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.addClass('active highlight');
+                }
+            } else if (e.type === 'blur') {
+                if ($this.val() === '') {
+                    label.removeClass('active highlight');
+                } else {
+                    label.removeClass('highlight');
+                }
+            } else if (e.type === 'focus') {
 
-        if ($this.val() === '') {
-          label.removeClass('highlight');
-        }
-        else if ($this.val() !== '') {
-          label.addClass('highlight');
-        }
-      }
+                if ($this.val() === '') {
+                    label.removeClass('highlight');
+                } else if ($this.val() !== '') {
+                    label.addClass('highlight');
+                }
+            }
 
-    });
-
-    $('.tab a').on('click', function (e) {
-
-      e.preventDefault();
-
-      $(this).parent().addClass('active');
-      $(this).parent().siblings().removeClass('active');
-
-      target = $(this).attr('href');
-
-      $('.tab-content > div').not(target).hide();
-
-      $(target).fadeIn(600);
-
-    });
-  </script>
-  <script>
-    function changeText(text) {
-      var y = document.getElementById('chgtext').innerHTML = text;
-      var x = document.getElementById("reply");
-      var z = document.getElementById("vest");
-      var b = document.getElementById("vest2");
-      z.disabled = false;
-      b.disabled = false;
-      if (x.style.display === "none") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "none";
-      }
-    }
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $('#replyb').click(function () {
-        $('#reply').toggle();
-      });
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $('#replyb2').click(function () {
-        $('#reply2').toggle();
-      });
-    });
-  </script>
-
-  <script>
-    function changeText2(text) {
-      var y = document.getElementById('chgtext2').innerHTML = text;
-      var x = document.getElementById("reply2");
-      if (x.style.display === "none") {
-        x.style.display = "none";
-      } else {
-        x.style.display = "none";
-      }
-    }
-  </script>
-  <script>
-    function isNumberKey(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-      if (charCode > 31 && (charCode < 48 || charCode > 57))
-        return false;
-      return true;
-    }    
-  </script>
-  <script type='text/javascript'>
-    function gotoPayment() {
-      let checkout_id = sessionStorage.getItem('checkoutid');
-      
-     
-      let email = document.getElementById('email').value;
-      let firstname = document.getElementById('firstname').value;
-      let lastname = document.getElementById('lastname').value;
-      let address = document.getElementById('address').value;
-      let phone = document.getElementById('phone').value;
-      let checkout_button = document.getElementById('checkout-button');
-      checkout_button.innerHTML = "loading..."
-      let user = {
-        email, firstname, lastname, address, phone
-      };
-      sessionStorage.setItem('user', JSON.stringify(user));
-      
-      console.log(checkout_id);
-      if(checkout_id === null ){
-        let amount = document.getElementById('amount').value;
-        sessionStorage.setItem('amount',amount);
-        window.location.href = 'payment.html'; 
-      }else{
-      let stripe = Stripe('pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W');
-        // When the customer clicks on the button, redirect
-        // them to Checkout.
-        stripe.redirectToCheckout({
-          items: [{sku: checkout_id, quantity: 1}],
-    
-          // Do not rely on the redirect to the successUrl for fulfilling
-          // purchases, customers may not always reach the success_url after
-          // a successful payment.
-          // Instead use one of the strategies described in
-          // https://stripe.com/docs/payments/checkout/fulfillment
-          successUrl: 'https://www.pawsalvation.com/success.html',
-          cancelUrl: 'https://www.pawsalvation.com/gift.html',
-        })
-        .then(function (result) {
-          if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer.
-            var displayError = document.getElementById('error-message');
-            displayError.textContent = result.error.message;
-          }
         });
-      }
-           
-    }
 
-  </script>
-<script>
+        $('.tab a').on('click', function(e) {
 
-document.querySelector('.overlay').addEventListener("click", function(){
-    window.btn_clicked = true;      //set btn_clicked to true
-});
+            e.preventDefault();
 
-window.onbeforeunload = function(){
-    if(!window.btn_clicked){
-        return 'You must click "Next Step" to make payment. If you leave now your donation will be canceled.';
-    }
-};
-</script>
-<script>
-   /* (function() {
-      var stripe = Stripe('pk_test_iwIbKn5FRd5WdW62rgnMAi5E00RQLMD54r');
-    
-      var checkoutButton = document.getElementById('checkout-button-sku_GH3FDGZBjSdluJ');
-      checkoutButton.addEventListener('click', function () {
-        // When the customer clicks on the button, redirect
-        // them to Checkout.
-        stripe.redirectToCheckout({
-          items: [{sku: 'sku_GH3FDGZBjSdluJ', quantity: 1}],
-    
-          // Do not rely on the redirect to the successUrl for fulfilling
-          // purchases, customers may not always reach the success_url after
-          // a successful payment.
-          // Instead use one of the strategies described in
-          // https://stripe.com/docs/payments/checkout/fulfillment
-          successUrl: 'https://your-website.com/success',
-          cancelUrl: 'https://your-website.com/canceled',
-        })
-        .then(function (result) {
-          if (result.error) {
-            // If `redirectToCheckout` fails due to a browser or network
-            // error, display the localized error message to your customer.
-            var displayError = document.getElementById('error-message');
-            displayError.textContent = result.error.message;
-          }
+            $(this).parent().addClass('active');
+            $(this).parent().siblings().removeClass('active');
+
+            target = $(this).attr('href');
+
+            $('.tab-content > div').not(target).hide();
+
+            $(target).fadeIn(600);
+
         });
-      });
-    })();*/
+    </script>
+    <script>
+        function changeText(text) {
+            var y = document.getElementById('chgtext').innerHTML = text;
+            var x = document.getElementById("reply");
+            var z = document.getElementById("vest");
+            var b = document.getElementById("vest2");
+            z.disabled = false;
+            b.disabled = false;
+            if (x.style.display === "none") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#replyb').click(function() {
+                $('#reply').toggle();
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('#replyb2').click(function() {
+                $('#reply2').toggle();
+            });
+        });
+    </script>
+
+    <script>
+        function changeText2(text) {
+            var y = document.getElementById('chgtext2').innerHTML = text;
+            var x = document.getElementById("reply2");
+            if (x.style.display === "none") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "none";
+            }
+        }
+    </script>
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
+    <script type='text/javascript'>
+        function gotoPayment() {
+            let checkout_id = sessionStorage.getItem('checkoutid');
+
+
+            let email = document.getElementById('email').value;
+            let firstname = document.getElementById('firstname').value;
+            let lastname = document.getElementById('lastname').value;
+            let address = document.getElementById('address').value;
+            let phone = document.getElementById('phone').value;
+            let checkout_button = document.getElementById('checkout-button');
+            checkout_button.innerHTML = "loading..."
+            let user = {
+                email,
+                firstname,
+                lastname,
+                address,
+                phone
+            };
+            sessionStorage.setItem('user', JSON.stringify(user));
+
+            console.log(checkout_id);
+            if (checkout_id === null) {
+                let amount = document.getElementById('amount').value;
+                sessionStorage.setItem('amount', amount);
+                window.location.href = 'payment.html';
+            } else {
+                let stripe = Stripe('pk_live_Ly4UYRqSQrSyDbq3sUUGgxU200RbJFyQ2W');
+                // When the customer clicks on the button, redirect
+                // them to Checkout.
+                stripe.redirectToCheckout({
+                        items: [{
+                            sku: checkout_id,
+                            quantity: 1
+                        }],
+
+                        // Do not rely on the redirect to the successUrl for fulfilling
+                        // purchases, customers may not always reach the success_url after
+                        // a successful payment.
+                        // Instead use one of the strategies described in
+                        // https://stripe.com/docs/payments/checkout/fulfillment
+                        successUrl: 'https://www.pawsalvation.com/success.html',
+                        cancelUrl: 'https://www.pawsalvation.com/gift.html',
+                    })
+                    .then(function(result) {
+                        if (result.error) {
+                            // If `redirectToCheckout` fails due to a browser or network
+                            // error, display the localized error message to your customer.
+                            var displayError = document.getElementById('error-message');
+                            displayError.textContent = result.error.message;
+                        }
+                    });
+            }
+
+        }
+    </script>
+    <script>
+        document.querySelector('.overlay').addEventListener("click", function() {
+            window.btn_clicked = true; //set btn_clicked to true
+        });
+
+        window.onbeforeunload = function() {
+            if (!window.btn_clicked) {
+                return 'You must click "Next Step" to make payment. If you leave now your donation will be canceled.';
+            }
+        };
+    </script>
+    <script>
+        /* (function() {
+                                                                                                                                                                                                                                                                                                                                                      var stripe = Stripe('pk_test_iwIbKn5FRd5WdW62rgnMAi5E00RQLMD54r');
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                      var checkoutButton = document.getElementById('checkout-button-sku_GH3FDGZBjSdluJ');
+                                                                                                                                                                                                                                                                                                                                                      checkoutButton.addEventListener('click', function () {
+                                                                                                                                                                                                                                                                                                                                                        // When the customer clicks on the button, redirect
+                                                                                                                                                                                                                                                                                                                                                        // them to Checkout.
+                                                                                                                                                                                                                                                                                                                                                        stripe.redirectToCheckout({
+                                                                                                                                                                                                                                                                                                                                                          items: [{sku: 'sku_GH3FDGZBjSdluJ', quantity: 1}],
+                                                                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                                                                                                                                                          // Do not rely on the redirect to the successUrl for fulfilling
+                                                                                                                                                                                                                                                                                                                                                          // purchases, customers may not always reach the success_url after
+                                                                                                                                                                                                                                                                                                                                                          // a successful payment.
+                                                                                                                                                                                                                                                                                                                                                          // Instead use one of the strategies described in
+                                                                                                                                                                                                                                                                                                                                                          // https://stripe.com/docs/payments/checkout/fulfillment
+                                                                                                                                                                                                                                                                                                                                                          successUrl: 'https://your-website.com/success',
+                                                                                                                                                                                                                                                                                                                                                          cancelUrl: 'https://your-website.com/canceled',
+                                                                                                                                                                                                                                                                                                                                                        })
+                                                                                                                                                                                                                                                                                                                                                        .then(function (result) {
+                                                                                                                                                                                                                                                                                                                                                          if (result.error) {
+                                                                                                                                                                                                                                                                                                                                                            // If `redirectToCheckout` fails due to a browser or network
+                                                                                                                                                                                                                                                                                                                                                            // error, display the localized error message to your customer.
+                                                                                                                                                                                                                                                                                                                                                            var displayError = document.getElementById('error-message');
+                                                                                                                                                                                                                                                                                                                                                            displayError.textContent = result.error.message;
+                                                                                                                                                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                                                                                                                                                        });
+                                                                                                                                                                                                                                                                                                                                                      });
+                                                                                                                                                                                                                                                                                                                                                    })();*/
     </script>
 </body>
 
