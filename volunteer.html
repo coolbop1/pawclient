@@ -93,7 +93,7 @@
                 <div class="tab-content">
                     <div id="signup">
 
-                        <form id="bill-info" class="myshow" action="" method="">
+                        <form id="bill-info" class="myshow" onsubmit="return volunteers()">
                             <div class="top-row">
                                 <div class="field-wrap">
                                     <label>
@@ -163,7 +163,7 @@
 
 
 
-                            <button id="checkout-button" type="submit" class="button button-block overlay" style="margin: auto;padding: auto;">Next <script>if (sessionStorage.getItem('checkoutid') === null)sessionStorage.getItem("frequency") == 1 ? document.write(" ") : document.write("");  </script></button>
+                            <button id="checkout-button" type="submit" class="button button-block overlay" style="margin: auto;padding: auto;">Register</button>
 
                         </form>
 
@@ -263,6 +263,58 @@
     <!-- Active js -->
     <script src="js/active.js"></script>
     <script>
+        function volunteers() {
+            let submitButton = document.getElementById("checkout-button");
+            submitButton.innerHTML = "Sending";
+            submitButton.disabled = true;
+        let firstname = document.getElementById("firstname").value;
+        let lastname = document.getElementById("lastname").value;
+        let phone = document.getElementById("phone").value;
+        let email = document.getElementById("email").value;
+        let social_media = document.getElementById("social-media").value;
+        let occupation = document.getElementById("occupation").value;
+        let pet = document.getElementById("pet").value;
+        let hear_us = document.getElementById("hear-us").value;
+        let volunteer = document.getElementById("Volunteer").value;
+
+        let payload = {
+            firstname,
+            lastname,
+            phone,
+            email,
+            social_media,
+            occupation,
+            pet,
+            hear_us,
+            volunteer
+        }
+
+        const url =  `https://pawsalvation.herokuapp.com/api/addvolunteer`;
+        fetch(url, {
+                method: "POST",
+                headers: new Headers({
+                    "Content-Type": "application/json; charset=UTF-8"
+                }),
+                body: JSON.stringify(payload)
+            })
+            .then(res => res.json())
+            .then(data => {
+                const { status } = data;
+                if (status === "success") {
+                    alert("Volunteer Registration Successful. we will get back to you soon.");
+                    submitButton.innerHTML = "Register";
+                    submitButton.disabled = false;
+                    setTimeout(function() { window.location = "https://pawsalvation.com/"; }, 2000);     
+                } else {
+                    alert("Error!, please try again");
+                    submitButton.innerHTML = "Register";
+                    submitButton.disabled = false;
+                }
+            })
+            .catch(err => console.log(err));
+
+    return false;
+}
         var selected_amount = sessionStorage.getItem('amount');
         var description = sessionStorage.getItem('description');
         var frequency = sessionStorage.getItem('frequency');
