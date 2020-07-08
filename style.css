@@ -2226,10 +2226,11 @@ label .req {
 }
 
 label.active {
-    -webkit-transform: translateY(50px);
-    transform: translateY(50px);
+    -webkit-transform: translateY(-25px);
+    transform: translateY(-25px);
     left: 2px;
     font-size: 14px;
+    color: #ffaf02;
 }
 
 label.active .req {
@@ -2237,7 +2238,7 @@ label.active .req {
 }
 
 label.highlight {
-    color: #ffffff;
+    color: #ffaf02;
 }
 
 input,
@@ -3172,7 +3173,7 @@ hr.gray {
 
 @media only screen and (max-width: 767px) {
     label {
-        font-size: 9px;
+        font-size: 8px!important;
     }
     .button-block {
         display: block;
@@ -3305,5 +3306,8 @@ input[type=number] {
 @media only screen and (max-width: 767px) {
     .ignite-image {
         height: 8rem;
+    }
+    .pp-volunteer {
+        font-size: 1.2rem;
     }
 }
