@@ -202,89 +202,94 @@
 
         <div class="container-fluid ">
 
-            <div class="form ">
-                <h2 class="mb-5 text-center ">Make a donation</h2>
-                <ul class="tab-group ">
+
+            <div class="form">
+                <h2 class="mb-5 text-center text-uppercase">Make a donation</h2>
+                <ul class="tab-group">
                     <script>
-                        if (sessionStorage.getItem("frequency ")) {
-                            sessionStorage.getItem("frequency ") == 1 ? document.write(`
-                  <li class="tab "><a onclick="changeFreqency(0) " href="#signup ">ONCE</a></li>
-                  <li class="tab active "><a onclick="changeFreqency(1) " href="#signup ">MONTHLY</a></li>
-                  `) : document.write(`
-                  <li class="tab active "><a onclick="changeFreqency(0) " href="#signup ">ONCE</a></li>
-                  <li class="tab "><a onclick="changeFreqency(1) " href="#signup ">MONTHLY</a></li>
-                  `);
+                        if (sessionStorage.getItem("frequency")) {
+                            sessionStorage.getItem("frequency") == 1 ? document.write(`
+            <li class="tab"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
+            <li class="tab active"><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `) : document.write(`
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
+            <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `);
                         } else {
                             document.write(`
-                  <li class="tab active "><a onclick="changeFreqency(0) " href="#signup ">ONCE</a></li>
-                  <li class="tab "><a onclick="changeFreqency(1) " href="#signup ">MONTHLY</a></li>
-                  `)
+            <li class="tab active"><a onclick="changeFreqency(0)" href="#signup">ONCE</a></li>
+            <li class="tab "><a onclick="changeFreqency(1)" href="#signup">MONTHLY</a></li>
+            `)
                         }
                     </script>
+
                 </ul>
 
-                <div class="tab-content ">
-                    <div id="signup ">
+                <div class="tab-content">
+                    <div id="signup">
 
-                        <!--<form action="javascript:void(0) " method=" ">
-
-
-
-              <div id="chgtext ">Your donation will ensure a constant healthy meal for a homeless pet.  </div>
+                        <!--<form action="javascript:void(0)" method="">
 
 
 
-              <div class="mt-70 text-center ">
-                <button  onclick="gotoDetailsForm() " class="btn btn-donate-1 btn-md btn-ls text-white font-weight-bold m-b " id="vest ">Donate</button>
+              <div id="chgtext">Your donation will ensure a constant healthy meal for a homeless pet.  </div>
+
+
+              <div class="mt-70 text-center">
+                <button onclick="gotoDetailsForm()" class="btn btn-donate-1 btn-md btn-ls 
+                 text-white font-weight-bold m-b" id="vest">Donate</button>
               </div>
 
               <br>
 
-              <div data-v-102623f8=" " class="strip ">
-                <div data-v-102623f8=" "><img data-v-102623f8=" " src="img/payment-strip.jpg " class=" "></div>
+              <div data-v-102623f8="" class="strip">
+                <div data-v-102623f8=""><img data-v-102623f8="" src="img/payment-strip.jpg" class=""></div>
               </div>
 
             </form>-->
-                        <form action="javascript:void(0) " method=" ">
+                        <form action="javascript:void(0)" method="">
 
 
-                            <div id="chgtext2 "></div>
-                            <div class="select-price ">
-                                <a href="# " onclick="changeText2( '20') " class="btn btn-outline-success price ">&#36;&nbsp;20</a>&nbsp; &nbsp;
+
+                            <div id="chgtext2">Your donation could pay for a kitten’s essential first vaccination. </div>
+                            <div class="select-price">
+                                <a href="#" onclick="changeText2('20')" class="btn btn-outline-success price">&#36;&nbsp;20</a>&nbsp; &nbsp;
 
 
-                                <a href="# " onclick="changeText2( '25') " class="btn btn-outline-success price ">&#36;&nbsp;25</a>&nbsp; &nbsp;
+                                <a href="#" onclick="changeText2('25')" class="btn btn-outline-success price">&#36;&nbsp;25</a>&nbsp; &nbsp;
 
 
-                                <a href="# " onclick="changeText2( '50') " class="btn btn-outline-success price ">&#36;&nbsp;50</a>&nbsp; &nbsp;
+                                <a href="#" onclick="changeText2('50')" class="btn btn-outline-success price">&#36;&nbsp;50</a>&nbsp; &nbsp;
 
-                                <a href="# " onclick="changeText2( '100') " class="btn btn-outline-success price ">&#36;&nbsp;100</a>&nbsp; &nbsp;
+                                <a href="#" onclick="changeText2('100')" class="btn btn-outline-success price">&#36;&nbsp;100</a>&nbsp; &nbsp;
 
-                                <a href="# " onclick="changeText2( '250') " class="btn btn-outline-success price ">&#36;&nbsp;250</a>&nbsp; &nbsp;
+                                <a href="#" onclick="changeText2('250')" class="btn btn-outline-success price">&#36;&nbsp;250</a>&nbsp; &nbsp;
 
-                                <a href="# " class="btn btn-outline-success price " id="replyb2 " onclick="changeText2( 'Type the amount you would like to donate. ', true) ">&#36;&nbsp;Other</a>
+                                <a href="#" class="btn btn-outline-success price" id="replyb2" onclick="changeText2('Type the amount you would like to donate. ', true)">&#36;&nbsp;Other</a>
 
                                 <br><br>
-                                <input onkeyup="inputAmount20() " type="number " min="10 " id="reply2 " class="form-control col-12 " placeholder="$ " style="margin: auto;margin-top: 1rem;display: none; " />
+                                <input onkeyup="inputAmount20()" type="number" min="10" id="reply2" class="form-control col-12" placeholder="$" style="margin: auto;margin-top: 1rem;display: none;" />
 
                             </div>
 
 
-                            <div class="mt-50 text-center ">
-                                <button onclick="gotoDetailsForm() " disabled class="btn btn-donate-1 btn-md btn-ls text-white font-weight-bold m-b " id="vest ">Donate</button>
+                            <div class="mt-50 text-center">
+                                <button onclick="gotoDetailsForm()" disabled class="btn btn-donate-1 btn-md btn-ls 
+                 text-white font-weight-bold m-b" id="vest">Donate</button>
                             </div>
 
                             <br>
 
-                            <div data-v-102623f8=" " class="strip ">
-                                <div data-v-102623f8=" "><img data-v-102623f8=" " src="img/payment-strip.jpg " class=" "></div>
+                            <div data-v-102623f8="" class="strip">
+                                <div data-v-102623f8=""><img data-v-102623f8="" src="img/payment-strip.jpg" class=""></div>
                             </div>
 
                         </form>
 
                     </div>
 
-                    <div id="login ">
+                    <div id="login">
+
 
                     </div>
 
@@ -292,6 +297,7 @@
                 <!-- tab-content -->
 
             </div>
+
             <!-- /form -->
 
         </div>
@@ -485,9 +491,9 @@
         }
     </script>
     <script>
-        var selected_amount = sessionStorage.getItem("amount ") ? sessionStorage.getItem("amount ") : 0;
-        var description = sessionStorage.getItem("description ") ? sessionStorage.getItem("description ") : " ";
-        var frequency = sessionStorage.getItem("frequency ") ? sessionStorage.getItem("frequency ") : 0;
+        var selected_amount = sessionStorage.getItem("amount") ? sessionStorage.getItem("amount") : 0;
+        var description = sessionStorage.getItem("description") ? sessionStorage.getItem("description") : "";
+        var frequency = sessionStorage.getItem("frequency") ? sessionStorage.getItem("frequency") : 0;
         $('.form').find('input, textarea').on('keyup blur focus', function(e) {
 
             var $this = $(this),
@@ -537,18 +543,18 @@
         }
 
         function inputAmount() {
-            description = "Monthly donation to Paw Salvation ";
-            var x = document.getElementById("reply ");
+            description = "Monthly donation to Paw Salvation";
+            var x = document.getElementById("reply");
             var y = document.getElementById('chgtext');
-            y.innerHTML = "Type in the amount you wish to donate. "
+            y.innerHTML = "Type in the amount you wish to donate."
 
-            var z = document.getElementById("vest ");
-            var b = document.getElementById("vest2 ");
+            var z = document.getElementById("vest");
+            var b = document.getElementById("vest2");
             b.disabled = z.disabled = true;
-            if (x.style.display === "none ") {
-                x.style.display = "none ";
+            if (x.style.display === "none") {
+                x.style.display = "none";
             } else {
-                x.style.display = "none ";
+                x.style.display = "none";
             }
             x.addEventListener('input', function(event) {
                 var text = `Your donation of $${this.value} could pay for a kitten’s essential first vaccination. `
@@ -563,18 +569,18 @@
         }
 
         function inputAmount2() {
-            description = "One-time donation to Paw Salvation ";
-            var x = document.getElementById("reply2 ");
+            description = "One-time donation to Paw Salvation";
+            var x = document.getElementById("reply2");
             var y = document.getElementById('chgtext2');
-            y.innerHTML = "Type in the amount you wish to donate. "
+            y.innerHTML = "Type in the amount you wish to donate."
 
-            var z = document.getElementById("vest ");
-            var b = document.getElementById("vest2 ");
+            var z = document.getElementById("vest");
+            var b = document.getElementById("vest2");
             b.disabled = z.disabled = true;
-            if (x.style.display === "none ") {
-                x.style.display = "none ";
+            if (x.style.display === "none") {
+                x.style.display = "none";
             } else {
-                x.style.display = "none ";
+                x.style.display = "none";
             }
             x.addEventListener('input', function(event) {
                 var text = `Your donation of $${this.value} could pay for a kitten’s essential first vaccination. `
@@ -585,37 +591,36 @@
         }
 
         function inputAmount20() {
-            description = "Donation to Paw Salvation ";
-            var x = document.getElementById("reply2 ");
+            description = "Donation to Paw Salvation";
+            var x = document.getElementById("reply2");
             var y = document.getElementById('chgtext2');
             var text = `Your donation of $${x.value} could pay for a kitten’s essential first vaccination. `
             y.innerHTML = text;
             selected_amount = x.value;
-            var z = document.getElementById("vest ");
-            // var b = document.getElementById("vest2 ");
+            var z = document.getElementById("vest");
+            // var b = document.getElementById("vest2");
             z.disabled = x.value < 10;
 
 
         }
 
         function changeText(amount) {
-            description = "Monthly donation to Paw Salvation ";
+            description = "Monthly donation to Paw Salvation";
             selected_amount = amount;
             var text = `${amount}`
             var y = document.getElementById('chgtext').innerHTML = text;
-            var x = document.getElementById("reply ");
-            var z = document.getElementById("vest ");
-            var b = document.getElementById("vest2 ");
+            var x = document.getElementById("reply");
+            var z = document.getElementById("vest");
+            var b = document.getElementById("vest2");
             z.disabled = false;
             b.disabled = false;
-            if (x.style.display === "none ") {
-                x.style.display = "none ";
+            if (x.style.display === "none") {
+                x.style.display = "none";
             } else {
-                x.style.display = "none ";
+                x.style.display = "none";
             }
         }
     </script>
-
     <script>
         $(document).ready(function() {
             $('#replyb').click(function() {
@@ -631,29 +636,27 @@
             });
         });
     </script>
-
     <script>
         function changeText2(amount, other = false) {
-            description = "donation to Paw Salvation ";
+            description = "donation to Paw Salvation";
             selected_amount = amount;
             var text = other ? amount : `Your donation of $${amount} could pay for a kitten’s essential first vaccination. `
             var y = document.getElementById('chgtext2').innerHTML = text;
-            var x = document.getElementById("reply2 ");
-            var z = document.getElementById("vest ");
-            //var b = document.getElementById("vest2 ");
+            var x = document.getElementById("reply2");
+            var z = document.getElementById("vest");
+            //var b = document.getElementById("vest2");
             other ? null : z.disabled = false;
             //other ? null : b.disabled = false;
-            if (x.style.display === "none ") {
-                x.style.display = "none ";
+            if (x.style.display === "none") {
+                x.style.display = "none";
             } else {
-                x.style.display = "none ";
+                x.style.display = "none";
             }
         }
     </script>
 
-
     <script type='text/javascript'>
-        console.log("selected_amount ", selected_amount);
+        console.log("selected_amount", selected_amount);
 
         function gotoDetailsForm() {
             sessionStorage.removeItem('checkoutid');
