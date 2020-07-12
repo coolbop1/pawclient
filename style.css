@@ -3310,4 +3310,11 @@ input[type=number] {
     .pp-volunteer {
         font-size: 1.2rem;
     }
+    .word-spacing {
+        word-spacing: 0px!important;
+    }
+}
+
+.word-spacing {
+    word-spacing: -5px;
 }
